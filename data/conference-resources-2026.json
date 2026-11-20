@@ -3926,6 +3926,98 @@
     "build"
    ],
    "role": "prompts for Qwen3-VL transcription"
+  },
+  {
+   "name": "The Homer Reader",
+   "type": "tool",
+   "subtype": "digital edition",
+   "what": "Boyer's reading edition of the Iliad and Odyssey: Greek and English side by side, click-to-parse morphology, LSJ and Cunliffe lookup, scene-by-scene glosses, a day-by-day calendar, maps with identifications graded by certainty, characters, genealogies, formulas, repetitions and full-text search.",
+   "url": "https://homer.johnhboyer.com/",
+   "licence": "Greek text CC BY-SA (Perseus); translations public domain",
+   "open": "open",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Boyer",
+     "session": "Scholarly Presentation: From Editions to Graphs",
+     "day": "Fri",
+     "use": "Boyer's example of a scholarly digital edition built with agentic coding."
+    }
+   ],
+   "id": 169,
+   "stage": "publication",
+   "also": [
+    "build"
+   ],
+   "role": "reading edition of Homer built with agents"
+  },
+  {
+   "name": "Perseus Digital Library Greek texts of Homer",
+   "type": "dataset",
+   "subtype": "corpus",
+   "what": "The Greek text of the Iliad and Odyssey from the Perseus Digital Library.",
+   "url": "https://www.perseus.tufts.edu/",
+   "licence": "CC BY-SA",
+   "open": "open",
+   "confidence": "likely",
+   "mentions": [
+    {
+     "who": "Boyer",
+     "session": "Scholarly Presentation: From Editions to Graphs",
+     "day": "Fri",
+     "use": "Source text for the Homer Reader."
+    }
+   ],
+   "id": 170,
+   "stage": "sources",
+   "also": [],
+   "role": "Greek source text for the edition"
+  },
+  {
+   "name": "LSJ and Cunliffe Greek lexicons",
+   "type": "dataset",
+   "subtype": "lexicon",
+   "what": "Liddell–Scott–Jones Greek–English Lexicon and Cunliffe's Lexicon of the Homeric Dialect.",
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0057",
+   "licence": "not stated",
+   "open": "open",
+   "confidence": "likely",
+   "mentions": [
+    {
+     "who": "Boyer",
+     "session": "Scholarly Presentation: From Editions to Graphs",
+     "day": "Fri",
+     "use": "Looked up from any Greek word in the Homer Reader."
+    }
+   ],
+   "id": 171,
+   "stage": "sources",
+   "also": [
+    "annotation"
+   ],
+   "role": "lexicons linked from every word"
+  },
+  {
+   "name": "Public-domain English translations of Homer (Murray, Butler, Pope)",
+   "type": "dataset",
+   "subtype": "translation",
+   "what": "Out-of-copyright English translations by A. T. Murray, Samuel Butler and Alexander Pope.",
+   "url": "not found",
+   "licence": "public domain",
+   "open": "open",
+   "confidence": "likely",
+   "mentions": [
+    {
+     "who": "Boyer",
+     "session": "Scholarly Presentation: From Editions to Graphs",
+     "day": "Fri",
+     "use": "Facing translations in the Homer Reader."
+    }
+   ],
+   "id": 172,
+   "stage": "sources",
+   "also": [],
+   "role": "facing English translations"
   }
  ],
  "stages_note": "stage/also/role: where each item sits in a pipeline from sources to publication (sources, capture, reading, normalisation, annotation, search, analysis, publication) or a cross-cutting layer (build, models, evaluation); assigned by a Sonnet agent from each item's description and uses, 20 Nov 2026."

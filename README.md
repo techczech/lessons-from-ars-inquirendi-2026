@@ -6,7 +6,7 @@ Notes and data from [Ars Inquirendi 2026](https://www.arsinq.com/), "Querying Pr
 
 ## What is here
 
-- **[index.html](index.html)**: a searchable, interlinked list of every skill or agent-instruction file, AI model, dataset, archive, tool, training or adaptation method, benchmark and paper named by participants. It has 168 distinct items. You can:
+- **[index.html](index.html)**: a searchable, interlinked list of every skill or agent-instruction file, AI model, dataset, archive, tool, training or adaptation method, benchmark and paper named by participants. It has 172 distinct items. You can:
   - browse by type, by session, by speaker, or see only items shared between sessions
   - search with accents ignored, and filter by type, openness and day
   - click a speaker to see everything they named
