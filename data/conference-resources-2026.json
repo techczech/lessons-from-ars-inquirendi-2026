@@ -1432,8 +1432,8 @@
    "name": "Agentic coding tools for scholarly editions (not named in abstract)",
    "type": "method",
    "subtype": "agentic coding",
-   "what": "Coding agents used to build digital editions of Homer and Aristotle; the abstract lists no products. The Homer edition is published as the Homer Reader (homer.johnhboyer.com).",
-   "url": "https://homer.johnhboyer.com/",
+   "what": "Coding agents used to build digital editions; the abstract lists no products. Boyer has published readers for Homer, Aristotle, Plato and Greek drama, plus a grammar reference (johnhboyer.com). He built the sites with AI; the translations are published public-domain ones.",
+   "url": "https://johnhboyer.com/",
    "licence": "unknown",
    "open": "unknown",
    "confidence": "not found",
@@ -4018,6 +4018,126 @@
    "stage": "sources",
    "also": [],
    "role": "facing English translations"
+  },
+  {
+   "name": "The Aristotle Reader",
+   "type": "tool",
+   "subtype": "digital edition",
+   "what": "Parallel-text reader of Aristotle's complete works in Greek and English: multiple published translations, Bekker citation, click-to-parse morphology, a Greek lexicon and search across the whole corpus.",
+   "url": "https://aristotle.johnhboyer.com/",
+   "licence": "not stated",
+   "open": "open",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Boyer",
+     "session": "Scholarly Presentation: From Editions to Graphs",
+     "day": "Fri",
+     "use": "The first of Boyer's readers, built with AI; the translations are published public-domain ones, not AI."
+    }
+   ],
+   "id": 173,
+   "stage": "publication",
+   "also": [
+    "build"
+   ],
+   "role": "reading edition of Aristotle built with agents"
+  },
+  {
+   "name": "The Plato Reader",
+   "type": "tool",
+   "subtype": "digital edition",
+   "what": "Parallel-text reader of Plato's complete works in Greek and English with Stephanus citation, click-to-parse morphology, a Greek lexicon and corpus search.",
+   "url": "https://plato.johnhboyer.com/",
+   "licence": "not stated",
+   "open": "open",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Boyer",
+     "session": "Scholarly Presentation: From Editions to Graphs",
+     "day": "Fri",
+     "use": "Built on the same model as the Aristotle Reader."
+    }
+   ],
+   "id": 174,
+   "stage": "publication",
+   "also": [
+    "build"
+   ],
+   "role": "reading edition of Plato built with agents"
+  },
+  {
+   "name": "The Greek Drama Reader",
+   "type": "tool",
+   "subtype": "digital edition",
+   "what": "Parallel-text reader of all 44 surviving Greek plays, with several Greek editions, multiple English translations to compare, morphology, lexicon and search.",
+   "url": "https://greekdrama.johnhboyer.com/",
+   "licence": "not stated",
+   "open": "open",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Boyer",
+     "session": "Scholarly Presentation: From Editions to Graphs",
+     "day": "Fri",
+     "use": "Built on the same model as the other readers."
+    }
+   ],
+   "id": 175,
+   "stage": "publication",
+   "also": [
+    "build"
+   ],
+   "role": "reading edition of Greek drama built with agents"
+  },
+  {
+   "name": "Grammata (Smyth and Allen & Greenough grammars)",
+   "type": "tool",
+   "subtype": "grammar reference",
+   "what": "Searchable Greek and Latin grammar reference built on Smyth's Greek Grammar and Allen & Greenough's Latin Grammar: search a construction, particles and prepositions, parse words.",
+   "url": "https://grammata.pages.dev/",
+   "licence": "not stated",
+   "open": "open",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Boyer",
+     "session": "Scholarly Presentation: From Editions to Graphs",
+     "day": "Fri",
+     "use": "Boyer's grammar reference, built to be easier to use than existing ones."
+    }
+   ],
+   "id": 176,
+   "stage": "publication",
+   "also": [
+    "annotation"
+   ],
+   "role": "searchable Greek and Latin grammars"
+  },
+  {
+   "name": "Boyer's tools in development (desktop reader, translation workbench, Bonitz's Index Aristotelicus)",
+   "type": "tool",
+   "subtype": "digital edition",
+   "what": "Announced work: the Aristotle Reader as a desktop app, a translation workbench for Greek and Latin, and a transcription of Bonitz's Index Aristotelicus.",
+   "url": "https://johnhboyer.com/",
+   "licence": "not stated",
+   "open": "unknown",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Boyer",
+     "session": "Scholarly Presentation: From Editions to Graphs",
+     "day": "Fri",
+     "use": "In development or in progress, per his site."
+    }
+   ],
+   "id": 177,
+   "stage": "publication",
+   "also": [
+    "build"
+   ],
+   "role": "announced next tools"
   }
  ],
  "stages_note": "stage/also/role: where each item sits in a pipeline from sources to publication (sources, capture, reading, normalisation, annotation, search, analysis, publication) or a cross-cutting layer (build, models, evaluation); assigned by a Sonnet agent from each item's description and uses, 20 Nov 2026."
