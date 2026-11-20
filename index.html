@@ -65,7 +65,7 @@ footer{max-width:1200px;margin:30px auto;padding:0 16px 40px;color:var(--muted);
 <body>
 <header><div class="wrap">
 <h1>Ars Inquirendi 2026: what participants named</h1>
-<p class="sub"><span id="sub"></span> <a href="map.html">Pipeline map →</a></p>
+<p class="sub"><span id="sub"></span> <a href="map.html">Pipeline map →</a> · <a href="https://github.com/techczech/lessons-from-ars-inquirendi-2026">Source and data on GitHub ↗</a></p>
 <div class="bar"><input id="q" type="search" placeholder="Search names, descriptions, speakers, sessions  ( / )" autocomplete="off">
 <div class="views"><button class="vbtn" data-v="type">By type</button><button class="vbtn" data-v="session">By session</button><button class="vbtn" data-v="speaker">By speaker</button><button class="vbtn" data-v="shared">Shared</button></div></div>
 <div class="chips" id="chips"></div>
@@ -117,7 +117,7 @@ var tmr;G('q').oninput=function(){clearTimeout(tmr);tmr=setTimeout(function(){st
 document.addEventListener('keydown',function(e){if(e.key==='/'&&!e.target.closest('input')){e.preventDefault();G('q').focus()}if(e.key==='Escape'&&document.activeElement===G('q')){G('q').value='';st.q='';render()}});
 var c=0,o={};I.forEach(function(r){o[r.open]=(o[r.open]||0)+1});
 G('sub').textContent=I.length+' distinct items named across the three days, '+(o.open||0)+' open. Search ignores accents; click a speaker to see everything they named.';
-G('foot').innerHTML='<p><b>Sources.</b> '+esc(DATA.sources)+'</p><p>'+esc(DATA.fields)+'. Built '+esc(DATA.date)+'. Data: <a href="data/conference-resources-2026.json">JSON</a> · <a href="data/conference-resources-2026.csv">CSV</a> · <a href="resources.md">Markdown</a>.</p>';
+G('foot').innerHTML='<p><b>Sources.</b> '+esc(DATA.sources)+'</p><p>'+esc(DATA.fields)+'. Built '+esc(DATA.date)+'. Repository: <a href="https://github.com/techczech/lessons-from-ars-inquirendi-2026">github.com/techczech/lessons-from-ars-inquirendi-2026</a>. Data: <a href="data/conference-resources-2026.json">JSON</a> · <a href="data/conference-resources-2026.csv">CSV</a> · <a href="resources.md">Markdown</a>.</p>';
 readHash();var h0=location.hash.match(/^#item-(\d+)$/);render();if(h0)goItem(+h0[1]);
 </script>
 </body>
