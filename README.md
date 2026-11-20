@@ -2,6 +2,8 @@
 
 Notes and data from [Ars Inquirendi 2026](https://www.arsinq.com/), "Querying Pre-Print Cultures with LLMs", St Edmund Hall, Oxford, 20–22 November 2026.
 
+**Browse it online:** https://techczech.github.io/lessons-from-ars-inquirendi-2026/
+
 ## What is here
 
 - **[index.html](index.html)**: a searchable, interlinked list of every skill or agent-instruction file, AI model, dataset, archive, tool, training or adaptation method, benchmark and paper named by participants. It has 168 distinct items. You can:
