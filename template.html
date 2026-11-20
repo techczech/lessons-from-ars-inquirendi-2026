@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ars Inquirendi 2026 resources</title>
+<meta name="description" content="Models, datasets, tools, methods and papers named by participants at Ars Inquirendi 2026, searchable and linked by speaker and session.">
+<style>
+:root{--ink:#1d1d1b;--muted:#6b675f;--line:#e2ddd2;--surface:#fff;--bg:#f7f5f0;--accent:#8a3b12;--blue:#2f6fb5;--green:#2e7d4f;--amber:#a26a00;--red:#b03a2e;--hi:#fff1d6;--soft:#f1ede4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#e9edf0;--muted:#a39d91;--line:#2b343b;--surface:#171c20;--bg:#111518;--accent:#f0a56b;--blue:#7fa9dc;--green:#7cc39a;--amber:#e0b45a;--red:#f08b7e;--hi:#3b2e17;--soft:#1e252a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--blue)}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 16px}
+.wrap{max-width:1200px;margin:0 auto}
+h1{font-size:clamp(20px,2.6vw,28px);margin:0 0 2px;line-height:1.2}
+.sub{color:var(--muted);font-size:14px;margin:0 0 8px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#q{flex:1 1 260px;font:inherit;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink)}
+.views{display:flex;gap:6px;flex-wrap:wrap}
+.vbtn,.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:4px 12px;cursor:pointer;font:inherit;font-size:14px}
+.vbtn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;font-size:13px}
+.chip{font-size:13px;padding:2px 10px}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip small{opacity:.7;margin-left:3px}
+.glab{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);align-self:center;margin-left:4px}
+main{padding:16px}
+.status{color:var(--muted);font-size:14px;margin:0 0 12px}
+.status button{border:0;background:none;color:var(--blue);cursor:pointer;font:inherit;text-decoration:underline}
+h2{font-size:20px;margin:26px 0 10px}
+h2 small{font-size:13px;color:var(--muted);font-weight:500}
+h3{font-size:16px;margin:18px 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--tc,var(--line));border-radius:0 12px 12px 0;padding:12px 14px;scroll-margin-top:150px}
+.card.flash{box-shadow:0 0 0 3px var(--accent)}
+.card h4{margin:0 0 4px;font-size:16px;line-height:1.3}
+.card h4 a{color:inherit;text-decoration:none}.card h4 a:hover{text-decoration:underline}
+.meta{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px}
+.b{font-size:11.5px;font-weight:700;border-radius:999px;padding:0 8px;border:1px solid var(--line);color:var(--muted)}
+.b.open{color:var(--green);border-color:color-mix(in srgb,var(--green) 45%,transparent)}
+.b.closed{color:var(--red);border-color:color-mix(in srgb,var(--red) 45%,transparent)}
+.b.partly{color:var(--amber);border-color:color-mix(in srgb,var(--amber) 45%,transparent)}
+.b.t{color:var(--tc);border-color:color-mix(in srgb,var(--tc) 45%,transparent)}
+.what{margin:0 0 6px;font-size:15px}
+.ment{font-size:14px;margin:4px 0 0;padding:0;list-style:none}
+.ment li{margin:3px 0}
+.who{cursor:pointer;color:var(--blue);border:0;background:none;padding:0;font:inherit;font-weight:600}
+.who:hover{text-decoration:underline}
+.ses{color:var(--muted)}
+.lnk{display:inline-block;margin-top:6px;font-size:13.5px;word-break:break-all}
+.nolink{font-size:13px;color:var(--muted);font-style:italic;margin-top:6px}
+.rel{font-size:13px;color:var(--muted);margin-top:8px;border-top:1px dashed var(--line);padding-top:6px}
+.rel a{margin-right:8px}
+.lic{font-size:12.5px;color:var(--muted)}
+mark{background:var(--hi);color:inherit;border-radius:2px}
+.sess{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0}
+.sess ul{margin:6px 0 0;padding-left:18px}.sess li{margin:3px 0;font-size:15px}
+.sess .spk{font-size:13.5px;color:var(--muted)}
+.empty{color:var(--muted);font-style:italic}
+footer{max-width:1200px;margin:30px auto;padding:0 16px 40px;color:var(--muted);font-size:13.5px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Ars Inquirendi 2026: what participants named</h1>
+<p class="sub" id="sub"></p>
+<div class="bar"><input id="q" type="search" placeholder="Search names, descriptions, speakers, sessions  ( / )" autocomplete="off">
+<div class="views"><button class="vbtn" data-v="type">By type</button><button class="vbtn" data-v="session">By session</button><button class="vbtn" data-v="speaker">By speaker</button><button class="vbtn" data-v="shared">Shared</button></div></div>
+<div class="chips" id="chips"></div>
+</div></header>
+<main class="wrap"><p class="status" id="status"></p><div id="out"></div></main>
+<footer id="foot"></footer>
+<script>
+var DATA=/*DATA*/null;
+var I=DATA.items, TYPES=[['model','Models'],['dataset','Datasets and corpora'],['archive','Archives and collections'],['benchmark','Benchmarks'],['tool','Tools and platforms'],['method','Methods (training, adaptation, workflow)'],['paper','Papers']];
+var TC={model:'#2f6fb5',dataset:'#2e7d4f',archive:'#7a6a55',benchmark:'#a26a00',tool:'#8a3b12',method:'#7a4fa3',paper:'#5b6b7a'};
+var DAYS={Fri:'Friday 20 Nov',Sat:'Saturday 21 Nov',Sun:'Sunday 22 Nov'};
+function G(id){return document.getElementById(id)}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function norm(s){return String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()}
+function speakers(r){var o=[];r.mentions.forEach(function(m){String(m.who||'').split(/;|,| and /).forEach(function(w){w=w.trim();if(w&&o.indexOf(w)<0)o.push(w)})});return o}
+I.forEach(function(r){r.sp=speakers(r);r.days=[];r.sessions=[];r.mentions.forEach(function(m){if(r.days.indexOf(m.day)<0)r.days.push(m.day);if(r.sessions.indexOf(m.session)<0)r.sessions.push(m.session)});r.hay=norm([r.name,r.subtype,r.what,r.licence,r.url,r.sp.join(' '),r.sessions.join(' '),r.mentions.map(function(m){return m.use}).join(' ')].join(' '))});
+var byId={};I.forEach(function(r){byId[r.id]=r});
+var st={q:'',type:'',open:'',day:'',who:'',view:'type'};
+try{var sv=localStorage.getItem('arsres-view');if(sv)st.view=sv}catch(e){}
+function readHash(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;if(/^item-\d+$/.test(h))return;h.split('&').forEach(function(p){var kv=p.split('=');if(kv[0] in st&&kv[0]!=='hay')st[kv[0]]=kv.slice(1).join('=')});G('q').value=st.q}
+function writeHash(){var p=[];['q','type','open','day','who','view'].forEach(function(k){if(st[k]&&!(k==='view'&&st[k]==='type'))p.push(k+'='+encodeURIComponent(st[k]))});history.replaceState(null,'',p.length?'#'+p.join('&'):location.pathname+location.search)}
+function match(r){if(st.type&&r.type!==st.type)return false;if(st.open&&r.open!==st.open)return false;if(st.day&&r.days.indexOf(st.day)<0)return false;if(st.who&&r.sp.indexOf(st.who)<0)return false;if(st.q){var ws=norm(st.q).split(/\s+/).filter(Boolean);for(var i=0;i<ws.length;i++)if(r.hay.indexOf(ws[i])<0)return false}return true}
+function hl(s){s=esc(s);if(!st.q)return s;norm(st.q).split(/\s+/).filter(function(w){return w.length>1}).forEach(function(w){var src=norm(s),out='',i=0,j;while((j=src.indexOf(w,i))>=0){out+=s.slice(i,j)+'<mark>'+s.slice(j,j+w.length)+'</mark>';i=j+w.length}s=out+s.slice(i)});return s}
+function related(r){var seen={},o=[];I.forEach(function(x){if(x===r)return;var share=x.sp.some(function(w){return r.sp.indexOf(w)>=0});if(share&&!seen[x.id]){seen[x.id]=1;o.push(x)}});return o.slice(0,8)}
+function card(r){var c=TC[r.type]||'#888';var link=(r.url&&r.url!=='not found')?'<a class="lnk" href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.url.replace(/^https?:\/\//,''))+' ↗</a>':'<div class="nolink">No public link found</div>';
+ var rel=related(r);
+ return '<div class="card" id="item-'+r.id+'" style="--tc:'+c+'"><h4><a href="#item-'+r.id+'">'+hl(r.name)+'</a></h4><div class="meta"><span class="b t">'+esc(r.type)+'</span><span class="b">'+esc(r.subtype)+'</span><span class="b '+esc(r.open)+'">'+esc(r.open)+'</span><span class="b">'+esc(r.confidence)+'</span></div><p class="what">'+hl(r.what)+'</p><ul class="ment">'+r.mentions.map(function(m){return '<li>'+String(m.who||'').split(/;|,| and /).map(function(w){w=w.trim();return w?'<button class="who" data-who="'+esc(w)+'">'+hl(w)+'</button>':''}).join(', ')+' <span class="ses">· '+hl(m.session)+' · '+esc(m.day)+'</span><br>'+hl(m.use)+'</li>'}).join('')+'</ul>'+link+(r.licence&&r.licence!=='n/a'?'<div class="lic">Licence: '+esc(r.licence)+'</div>':'')+(rel.length?'<div class="rel">Same speaker: '+rel.map(function(x){return '<a href="#item-'+x.id+'">'+esc(x.name)+'</a>'}).join('')+'</div>':'')+'</div>'}
+function chips(){var h='';function grp(lab,key,vals){h+='<span class="glab">'+lab+'</span>';vals.forEach(function(v){var n=I.filter(function(r){var t=Object.assign({},st);t[key]='';var ok=(function(){var s0=st;st=t;var m=match(r);st=s0;return m})();return ok&&(key==='day'?r.days.indexOf(v[0])>=0:r[key]===v[0])}).length;h+='<button class="chip'+(st[key]===v[0]?' on':'')+'" data-k="'+key+'" data-v="'+esc(v[0])+'">'+esc(v[1])+'<small>'+n+'</small></button>'})}
+ grp('Type','type',TYPES);grp('Open','open',[['open','open'],['partly','partly'],['closed','closed'],['unknown','unknown']]);grp('Day','day',[['Fri','Fri'],['Sat','Sat'],['Sun','Sun']]);
+ if(st.who)h+='<span class="glab">Speaker</span><button class="chip on" data-k="who" data-v="'+esc(st.who)+'">'+esc(st.who)+' ✕</button>';
+ G('chips').innerHTML=h;
+ G('chips').querySelectorAll('.chip').forEach(function(b){b.onclick=function(){var k=b.dataset.k;st[k]=st[k]===b.dataset.v?'':b.dataset.v;render()}})}
+function render(){writeHash();try{localStorage.setItem('arsres-view',st.view)}catch(e){}
+ document.querySelectorAll('.vbtn').forEach(function(b){b.classList.toggle('on',b.dataset.v===st.view)});chips();
+ var R=I.filter(match),h='';
+ var any=st.q||st.type||st.open||st.day||st.who;
+ G('status').innerHTML=R.length+' of '+I.length+' items'+(any?' <button id="clr">clear filters</button>':'');
+ if(!R.length)h='<p class="empty">Nothing matches. Try fewer words, or clear the filters.</p>';
+ else if(st.view==='type'){TYPES.forEach(function(t){var rs=R.filter(function(r){return r.type===t[0]});if(!rs.length)return;rs.sort(function(a,b){return String(a.subtype).localeCompare(b.subtype)||a.name.localeCompare(b.name)});h+='<h2>'+t[1]+' <small>'+rs.length+'</small></h2><div class="grid">'+rs.map(card).join('')+'</div>'})}
+ else if(st.view==='session'){['Fri','Sat','Sun'].forEach(function(d){var ss={};R.forEach(function(r){r.mentions.forEach(function(m){if(m.day!==d)return;(ss[m.session]=ss[m.session]||{who:{},items:[]});String(m.who||'').split(/;|,| and /).forEach(function(w){w=w.trim();if(w)ss[m.session].who[w]=1});if(ss[m.session].items.indexOf(r)<0)ss[m.session].items.push(r)})});var ks=Object.keys(ss);if(!ks.length)return;h+='<h2>'+DAYS[d]+'</h2>';ks.forEach(function(k){var s=ss[k];h+='<div class="sess"><b>'+hl(k)+'</b><div class="spk">'+Object.keys(s.who).map(function(w){return '<button class="who" data-who="'+esc(w)+'">'+esc(w)+'</button>'}).join(', ')+'</div><ul>'+s.items.map(function(r){return '<li><a href="#item-'+r.id+'">'+hl(r.name)+'</a> <span class="b t" style="--tc:'+TC[r.type]+'">'+r.type+'</span> <span class="b '+r.open+'">'+r.open+'</span></li>'}).join('')+'</ul></div>'})})}
+ else if(st.view==='speaker'){var sp={};R.forEach(function(r){r.sp.forEach(function(w){(sp[w]=sp[w]||[]).push(r)})});Object.keys(sp).sort(function(a,b){return a.localeCompare(b)}).forEach(function(w){h+='<div class="sess"><button class="who" data-who="'+esc(w)+'">'+esc(w)+'</button> <span class="spk">'+sp[w].length+' items · '+sp[w][0].sessions.map(esc).join('; ')+'</span><ul>'+sp[w].map(function(r){return '<li><a href="#item-'+r.id+'">'+hl(r.name)+'</a> <span class="b t" style="--tc:'+TC[r.type]+'">'+r.type+'</span></li>'}).join('')+'</ul></div>'})}
+ else{var sh=R.filter(function(r){return r.sessions.length>1}).sort(function(a,b){return b.sessions.length-a.sessions.length});h+='<h2>Shared across speakers <small>'+sh.length+'</small></h2><p class="sub">Items named in more than one session: the shared infrastructure of the field.</p><div class="grid">'+sh.map(card).join('')+'</div>'}
+ G('out').innerHTML=h;var c=G('clr');if(c)c.onclick=function(){st.q=st.type=st.open=st.day=st.who='';G('q').value='';render()};
+ G('out').querySelectorAll('.who').forEach(function(b){b.onclick=function(){st.who=b.dataset.who;scrollTo(0,0);render()}})}
+function goItem(id){var r=byId[id];if(!r)return;if(!match(r)){st.q=st.type=st.open=st.day=st.who='';G('q').value=''}if(st.view!=='type'){st.view='type'}render();history.replaceState(null,'','#item-'+id);var e=G('item-'+id);if(e){e.scrollIntoView({block:'center'});e.classList.add('flash');setTimeout(function(){e.classList.remove('flash')},1600)}}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#item-"]');if(a){e.preventDefault();goItem(+a.getAttribute('href').slice(6))}});
+document.querySelectorAll('.vbtn').forEach(function(b){b.onclick=function(){st.view=b.dataset.v;render()}});
+var tmr;G('q').oninput=function(){clearTimeout(tmr);tmr=setTimeout(function(){st.q=G('q').value.trim();render()},120)};
+document.addEventListener('keydown',function(e){if(e.key==='/'&&!e.target.closest('input')){e.preventDefault();G('q').focus()}if(e.key==='Escape'&&document.activeElement===G('q')){G('q').value='';st.q='';render()}});
+var c=0,o={};I.forEach(function(r){o[r.open]=(o[r.open]||0)+1});
+G('sub').textContent=I.length+' distinct items named across the three days, '+(o.open||0)+' open. Search ignores accents; click a speaker to see everything they named.';
+G('foot').innerHTML='<p><b>Sources.</b> '+esc(DATA.sources)+'</p><p>'+esc(DATA.fields)+'. Built '+esc(DATA.date)+'. Data: <a href="data/conference-resources-2026.json">JSON</a> · <a href="data/conference-resources-2026.csv">CSV</a> · <a href="resources.md">Markdown</a>.</p>';
+readHash();var h0=location.hash.match(/^#item-(\d+)$/);render();if(h0)goItem(+h0[1]);
+</script>
+</body>
+</html>

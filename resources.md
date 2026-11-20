@@ -1,0 +1,193 @@
+---
+title: "Ars Inquirendi 2026: models, datasets, tools, methods and papers"
+date: 2026-11-20
+register: FOR DOMINIK
+source: conference-resources-2026.json (same data); see its "sources" field
+---
+
+# Ars Inquirendi 2026: what participants named
+
+160 distinct items from all three days (166 mentions before merging duplicates). By type: Models 35, Datasets and corpora 23, Archives and collections 19, Benchmarks 5, Tools and platforms 34, Methods (training, adaptation, workflow) 25, Papers 19. Openness: open 78, unknown 46, closed 19, partly 17.
+
+Compiled from the public programme and abstracts, linked slides, papers and repositories, the Graphosphere I recordings and the Meelen keynote notes. Links were found by web search and not checked by a person. "Not found" means no public link was found, often because a talk names a method without a product. Data: `conference-resources-2026.json` and `.csv` in this folder.
+
+## Models (35)
+
+- **MITRA-Qwen3.5 (base, 9B)** · continued pretraining · open, verified. Qwen3.5-9B continued-pretrained on about 30B tokens of Buddhist corpora, then finetuned on parallel translation data. *Used by:* Nehrdich (Sun). https://huggingface.co/buddhist-nlp/mitra-qwen35-base
+- **Fate Twin** · diffusion degradation simulator · unknown, not found. Diffusion-based simulator of plausible manuscript degradation paths. *Used by:* X. Li (Fri). no public link found
+- **all-MiniLM-L6-v2** · embedding model · open, likely. Sentence-transformer producing 384-dimensional embeddings (22.7M parameters). *Used by:* Celli (Sat). https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+- **MITRA-Qwen3.5 embedder (9B and 2B)** · embedding model · open, likely. Multilingual retrieval embedders trained with contrastive finetuning on parallel Sanskrit, Tibetan, Chinese, Pali and English data. *Used by:* Nehrdich (Sun). https://huggingface.co/buddhist-nlp/mitra-qwen35-embedder
+- **SikuBERT** · embedding model · open, verified. BERT model pre-trained on the Siku Quanshu corpus of classical Chinese. *Used by:* Li; Qu (Sat). https://huggingface.co/SIKU-BERT/sikubert
+- **SikuRoBERTa** · embedding model · open, likely. RoBERTa-style companion to SikuBERT from the same group (Nanjing Agricultural University). *Used by:* Li; Qu (Sat). https://huggingface.co/SIKU-BERT/sikuroberta
+- **U-Net** · image segmentation · open, verified. Convolutional segmentation network. *Used by:* X. Li (Fri). https://arxiv.org/abs/1505.04597
+- **ChatGPT 5.6 Sol** · LLM · closed, not found. OpenAI LLM. *Used by:* Pink (Sat). no public link found
+- **Claude (Anthropic)** · LLM · closed, likely. Anthropic's LLM family. *Used by:* Savant (Fri); Pink (Sat). https://www.anthropic.com/claude
+- **Claude Sonnet 4** · LLM · closed, likely. Anthropic LLM. *Used by:* Zbíral; Brys; Shaw; Kotzé (Sat). https://www.anthropic.com/claude/sonnet
+- **Commercial frontier LLM for toponym extraction** · LLM · closed, not found. An unnamed commercially available frontier LLM. *Used by:* Sitchinava (Fri). no public link found
+- **Commercial multimodal LLMs for HTR (Gemini, Claude, GPT via API)** · LLM · closed, likely. Frontier vision-language models that rival dedicated HTR but tend to normalise or modernise transcriptions. *Used by:* Rabus (Sun). no public link found
+- **DeepSeek R1** · LLM · open, likely. DeepSeek's reasoning LLM (China). *Used by:* Celli (Sat). https://huggingface.co/deepseek-ai/DeepSeek-R1
+- **DeepSeek v4** · LLM · unknown, not found. Independently trained LLM family. *Used by:* Stefanski (Sat). no public link found
+- **Gemini 2.0 Flash** · LLM · closed, likely. Google LLM. *Used by:* Celli (Sat). https://deepmind.google/models/gemini/
+- **Gemini 2.5 Pro and Gemini 2.5 Flash** · LLM · closed, verified. Google LLMs. *Used by:* Stefanski (Sat). https://deepmind.google/models/gemini/
+- **Grok 4.5** · LLM · closed, not found. xAI LLM. *Used by:* Pink (Sat). no public link found
+- **Llama 3.1 (large)** · LLM · partly, likely. Meta's open-weight LLM (US). *Used by:* Celli (Sat). https://huggingface.co/meta-llama
+- **Mistral 3 (medium)** · LLM · closed, likely. Mistral's LLM (EU). *Used by:* Celli (Sat). https://mistral.ai/
+- **MITRA-Qwen3.5 instruction model (mitra-qwen35-it)** · LLM · open, likely. Multi-turn SFT instruction model built on the MITRA-Qwen3.5 base. *Used by:* Nehrdich (Sun). https://huggingface.co/buddhist-nlp/mitra-qwen35-it
+- **Qwen3.5** · LLM · open, likely. Open-weight LLM family used as the base for MITRA. *Used by:* Nehrdich (Sun). no public link found
+- **KenLM** · n-gram LM · open, verified. A fast n-gram language-model toolkit. *Used by:* Meelen (Fri). https://github.com/kpu/kenlm
+- **YOLO11 (Ultralytics)** · object detection · open, verified. Object-detection model family. *Used by:* X. Li (Fri). https://github.com/ultralytics/ultralytics
+- **AnandaSky** · OCR/HTR model · open, verified. Brisson's Chinese handwritten text recognition model, trained on lines aligned to existing transcriptions; character error under 1%. *Used by:* Brisson (Fri). https://huggingface.co/badianeai/AnandaSky
+- **CHAT models and Siku HTR models (Brisson)** · OCR/HTR model · open, likely. Brisson's released Chinese handwriting recognition models. *Used by:* Brisson (Fri). https://github.com/colibrisson/CHAT_models
+- **dots.ocr** · OCR/HTR model · open, likely. Specialised document-OCR vision-language model from rednote-hilab. *Used by:* Y. Li (Fri). https://github.com/rednote-hilab/dots.ocr
+- **Polyscriptor CRNN-CTC and TrOCR models (Church Slavonic, Ukrainian, Prosta Mova, Glagolitic, Russian)** · OCR/HTR model · open, likely. Line-level HTR models with reported CER of about 2.9 to 6.9 percent. *Used by:* Rabus (Sun). https://github.com/achimrabus/polyscriptor
+- **Transkribus (platform; PaganTibet Ume models trained in it)** · HTR platform and models · open, likely. Handwriting-recognition models trained in Transkribus on Tibetan Ume manuscripts; PT-Ume7 reaches 3.71% character error. *Used by:* Meelen (Fri); Rabus (Sun). https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.388
+- **ByT5-Sanskrit** · seq2seq model · open, likely. Byte-level ByT5 model for Sanskrit segmentation, lemmatisation, tagging, parsing and OCR post-correction. *Used by:* Nehrdich (Sun). https://github.com/sebastian-nehrdich/byt5-sanskrit-analyzers
+- **MMS (Massively Multilingual Speech)** · speech model · partly, likely. Meta's multilingual speech recognition models. *Used by:* Meelen (Fri). https://github.com/facebookresearch/fairseq/tree/main/examples/mms
+- **Wav2Vec2** · speech model · open, likely. Facebook's self-supervised speech representation model. *Used by:* Meelen (Fri). https://arxiv.org/abs/2006.11477
+- **Whisper** · speech recognition · open, verified. OpenAI's open speech-recognition model. *Used by:* Meelen (Fri). https://github.com/openai/whisper
+- **DeepSeek-OCR** · vision-language model · open, likely. DeepSeek's open OCR vision-language model. *Used by:* Y. Li (Fri). https://github.com/deepseek-ai/DeepSeek-OCR
+- **Qwen3-VL** · vision-language model · open, likely. Alibaba's open vision-language model family. *Used by:* Y. Li (Fri); Rabus (Sun). https://github.com/QwenLM/Qwen3-VL
+- **Vision-capable frontier models (unnamed)** · vision-language model · closed, not found. Unnamed frontier models probed on Saharan manuscripts. *Used by:* Owen (Fri). no public link found
+
+## Datasets and corpora (23)
+
+- **chronos-llm-agreement dataset** · annotation dataset · open, likely. Human and LLM labels of historical events for agreement analysis. *Used by:* Celli (Sat). https://huggingface.co/datasets/facells/chronos-llm-sdt-agreeement
+- **PaganTibet HTR Input & Correction Manual** · annotation guidelines · open, verified. Manual for transcribing and correcting Tibetan Ume manuscripts. *Used by:* Meelen (Fri). https://zenodo.org/records/17257009
+- **QUINCUNX data and audit record** · audit record · open, verified. Registered tests and audit data for the QUINCUNX EDH experiment. *Used by:* Pink (Sat). https://doi.org/10.5281/zenodo.21878845
+- **CrisisDB** · coded dataset · unknown, likely. Seshat offshoot recording crisis cases and outcomes (unrest, civil war, collapse, resilience). *Used by:* Turchin (Sat). https://peterturchin.com/topics/historical-databases-and-quantitative-history
+- **Seshat-perspective** · coded dataset · open, verified. Synthetic expansion of Seshat to 1,023 polities, annotated by three LLMs from different countries. *Used by:* Celli (Sat). https://github.com/facells/fabio-celli-publications/raw/refs/heads/main/docs/seshat_perspective.zip
+- **Seshat: Global History Databank** · coded dataset · open, verified. Expert-coded variables on 840+ polities from about 10000 BCE to 1900 CE. *Used by:* Turchin; Celli (Sat). https://seshat-db.com/
+- **1001 Conjectures** · conjecture registry · open, likely. 1,899 falsifiable conjectures about the pre-print world, the first 1,001 generated by a Claude model. *Used by:* Pink (Sat). https://www.arsinq.com/1001/
+- **ACTib 2.0** · corpus · open, likely. 185-million-token tagged corpus of Classical Tibetan. *Used by:* Meelen (Fri). https://zenodo.org/records/3951486
+- **Cyphersolver catalogue (catalogue.json, SOLVED_CATALOGUE.md)** · corpus · open, likely. Largely auto-generated database of historical ciphers, transcriptions and proposed decipherments inside the Cyphersolver repo; also at cyphersolver.com. *Used by:* Kiessling (Sun). https://cyphersolver.com
+- **Digital Corpus of Sanskrit** · corpus · open, verified. Hellwig's lemmatised Sanskrit corpus. *Used by:* Kulkarni (Fri). http://www.sanskrit-linguistics.org/dcs/
+- **EDH cleaned dataset (Zenodo)** · corpus · open, likely. Cleaned EDH export, about 82,000 Roman inscriptions. *Used by:* Pink (Sat). https://zenodo.org/records/7303886
+- **OpenITI corpus** · corpus · open, likely. Machine-readable corpus of Arabic and Islamicate texts (8,810 Arabic books in Savant's count). *Used by:* Savant (Fri). https://zenodo.org/records/17767721
+- **Parallel data mined between classical languages (MITRA-parallel)** · corpus · open, likely. Mined parallel sentence pairs across Sanskrit, Chinese and Tibetan (1.74M pairs in the original release). *Used by:* Nehrdich (Sun). https://arxiv.org/abs/2601.06400v1
+- **PARSEME 2.0 Multilingual Corpus of Multiword Expressions** · corpus · open, likely. Multilingual MWE corpus including the Shared Task 2025 Ancient Greek data (Savary et al. 2026). *Used by:* Fendel (Sun). https://aclanthology.org/2026.lrec-1.378/
+- **Postcards of Soviet Ukrainian forced labourers (Nazi Germany)** · corpus · unknown, not found. Corpus of handwritten postcards in mixed Russian and Ukrainian with complex layouts. *Used by:* Rabus (Sun). no public link found
+- **Regional Great Russian Dictionary (1852) and eleven Church Slavonic/historical Russian dictionaries** · corpus · unknown, not found. Pre-print-era lexicographic sources including the 1852 dictionary and the Suprasl Codex readings. *Used by:* Zhilina (Sun). no public link found
+- **UniDive WG1 Sub-task 1.6 Latin data** · corpus · unknown, not found. Latin historiography sample annotated for MWEs. *Used by:* Fendel (Sun). no public link found
+- **Universal Dependencies treebank (Ancient Greek)** · corpus · open, likely. Existing treebank that the PARSEME team adjusts and enhances with manual MWE annotation. *Used by:* Fendel (Sun). https://universaldependencies.org
+- **Hinschius's Decretales Pseudo-Isidorianae apparatus** · critical edition · open, not found. 1863 edition with source apparatus for the Pseudo-Isidorian Decretals. *Used by:* Witowski (Fri). no public link found
+- **Tibetan-normalisation-testdata** · gold test set · open, likely. 217 PaganTibet lines, diplomatic to standard. *Used by:* Meelen (Fri). https://huggingface.co/datasets/pagantibet/Tibetan-normalisation-testdata
+- **TibSchol Tibetan cursive ground truth and Transkribus models** · HTR ground truth · open, likely. Ground truth and public Drutsa and Betsug models from the TibSchol project. *Used by:* Meelen (Fri). https://github.com/ERC-TibSchol/Tibetan-cursive-GT
+- **Khotanese character dataset (256 classes, 201,452 images)** · image dataset · unknown, not found. Character images of the endangered Khotanese script built by self-supervised contrastive learning and clustering. *Used by:* X. Li (Fri). no public link found
+- **Schon's Pseudoisidor transcriptions** · transcriptions · unknown, not found. Karl-Georg Schon's transcriptions of Pseudo-Isidore. *Used by:* Witowski (Fri). no public link found
+
+## Archives and collections (19)
+
+- **Converso kinship records (musters, inquisitorial proceedings, wills, genealogical inquiries)** · archival records · unknown, not found. Dispersed Iberian, Spanish Florida, Mexico City and Caribbean records, 16th-early 17th century. *Used by:* Martínez-Dávila (Sat). no public link found
+- **Chinese Text Project (ctext.org)** · corpus · partly, verified. Crowdsourced digital library of pre-modern Chinese with over 7 billion characters, about 3000 years of writing, 40,000 daily users. *Used by:* Sturgeon (Sun). https://ctext.org
+- **Dharmamitra Hugging Face organisation (buddhist-nlp)** · corpus · open, verified. Hub holding the project's models and datasets for Buddhist languages. *Used by:* Nehrdich (Sun). https://huggingface.co/buddhist-nlp
+- **EEBO-TCP, Evans, ECCO and Internet Archive collections** · corpus · partly, likely. Four collections outside Gutenberg, about 5,000 books. *Used by:* Stefanski (Sat). https://textcreationpartnership.org/
+- **Epigraphic Database Heidelberg (EDH)** · corpus · open, verified. About 82,000 Latin inscriptions of the Roman Empire. *Used by:* Pink (Sat). https://edh.ub.uni-heidelberg.de/
+- **Epigraphic Database Roma (EDR)** · corpus · unknown, verified. Online database of Latin inscriptions of Rome and Italy. *Used by:* Pink (Sat). http://www.edr-edr.it/
+- **Medieval inquisition registers (20 registers, 1243-1522)** · corpus · unknown, not found. Registers from South-Western France, North-Central Italy, Switzerland and England, 4,357 testimonies. *Used by:* Zbíral; Brys; Shaw; Kotzé (Sat). no public link found
+- **Project Gutenberg** · corpus · open, verified. Public-domain digital library; the main corpus of about 23,000 books. *Used by:* Stefanski (Sat). https://www.gutenberg.org/
+- **Yongzheng palace-memorial (zouzhe) corpus with vermilion rescripts** · corpus · unknown, not found. Memorials with zhupi rescripts, 1723-1735, circulated between the throne and provincial officials. *Used by:* Li; Qu (Sat). no public link found
+- **Early English Books Online (EEBO)** · digital library · closed, likely. ProQuest collection of English books to 1700. *Used by:* Y. Li (Fri). https://www.proquest.com/eebo
+- **Eighteenth Century Collections Online (ECCO)** · digital library · closed, likely. Gale collection of 18th-century printed books. *Used by:* Y. Li (Fri). https://www.gale.com/primary-sources/eighteenth-century-collections-online
+- **Gallica (BnF)** · digital library · partly, verified. French national library's digital collection. *Used by:* Y. Li (Fri). https://gallica.bnf.fr/
+- **HathiTrust** · digital library · partly, verified. Shared repository of digitised books with an API. *Used by:* Y. Li (Fri). https://www.hathitrust.org/
+- **Internet Archive** · digital library · partly, verified. Online library with PDFs, its own OCR and an API. *Used by:* Y. Li (Fri). https://archive.org/
+- **BnF Pelliot chinois collection (Gallica)** · image collection · partly, likely. Dunhuang manuscripts held by the Bibliothèque nationale de France. *Used by:* Brisson (Fri). https://gallica.bnf.fr
+- **International Dunhuang Programme (IDP)** · image collection · partly, likely. Joint online archive of dispersed Dunhuang manuscripts, led by the British Library. *Used by:* Brisson; X. Li (Fri). https://idp.bl.uk
+- **MDZ (Münchener DigitalisierungsZentrum) scans** · image collection · partly, likely. Bavarian State Library digitised manuscripts. *Used by:* Witowski (Fri). https://www.digitale-sammlungen.de
+- **Stewart microforms of Mauritanian manuscripts (UIUC)** · image collection · unknown, not found. Digitised microfilms of Saharan manuscripts at Urbana-Champaign. *Used by:* Owen (Fri). no public link found
+- **Medici-Gondi archive (Penn)** · manuscript collection · unknown, not found. Financial records of two Florentine families, 13th to 18th centuries, held at the University of Pennsylvania. *Used by:* Morreale (Fri). no public link found
+
+## Benchmarks (5)
+
+- **chronos-historical-sdt-benchmark** · annotation benchmark · open, likely. Short historical event texts labelled with Structural-Demographic phases. *Used by:* Celli (Sat). https://huggingface.co/datasets/facells/chronos-historical-sdt-benchmark
+- **Gold-standard componential and Greek-Slavonic analysis of красота** · benchmark · unknown, not found. Manual analysis of one word across eleven Church Slavonic and Russian dictionaries, used as the evaluation standard. *Used by:* Zhilina (Sun). no public link found
+- **MITRA-zh-eval and Sanskrit benchmarks** · benchmark · unknown, likely. Evaluation sets for Buddhist Chinese and Sanskrit tasks (e.g. Sanskrit WSD from lexicographic definitions). *Used by:* Nehrdich (Sun). https://sebastian-nehrdich.github.io/files/sanskrit-wsd-iscls2026.pdf
+- **Source-fidelity comparison of LLMs on Islamic texts** · evaluation · unknown, not found. Questions from hadith, law, theology and exegesis put to several widely used models and checked against primary sources. *Used by:* Al-Harbi (Fri). no public link found
+- **Hofstede cultural dimension scores and other modern value surveys** · survey benchmark · unknown, not found. Country-level cultural scores used to validate the text-derived measure. *Used by:* Stefanski (Sat). no public link found
+
+## Tools and platforms (34)
+
+- **Aevron** · agentic coding · closed, not found. Private single-user research engine that holds notes, sources and files, tests connections and states claims with their grounds. *Used by:* Parthasarathy (Sun). no public link found
+- **Claude Code** · agentic coding · closed, likely. Anthropic's coding agent. *Used by:* Rabus (Sun). https://www.anthropic.com/claude-code
+- **Codex (OpenAI)** · agentic coding · partly, likely. OpenAI's coding agent, used as an LLM harness over local files. *Used by:* Grant (Fri); Rabus (Sun). https://openai.com/codex
+- **Cyphersolver** · agentic coding · open, verified. Open-source project cataloguing and attempting to decipher unsolved historical ciphers (1400-1950) with agentic LLMs. *Used by:* Kiessling (Sun). https://github.com/dbourdeau/cyphersolver
+- **GitHub Copilot** · agentic coding · closed, likely. GitHub's AI coding assistant, used inside VS Code. *Used by:* Dows-Miller (Sat). https://github.com/features/copilot
+- **Vibe-Coding for Medievalists repository** · agentic coding · unknown, verified. Workshop materials: prompts, sample transcriptions and a handout PDF for building a TEI-encoding web app. *Used by:* Dows-Miller (Sat). https://github.com/dowsmiller/vibecoding
+- **QUINCUNX** · agentic conjecture engine · unknown, verified. LLM-driven loop that mints conjectures, tests them against evidence, grades mechanisms and promotes survivors into inference instruments. *Used by:* Pink (Sat). https://www.arsinq.com/articles/quincunx/
+- **eScriptorium** · annotation platform · open, likely. Web platform for annotating, transcribing and training ATR models, built around Kraken. *Used by:* Kiessling (Sun). https://gitlab.com/scripta/escriptorium/
+- **Virtual Mappa** · annotation platform · open, likely. Collaborative project that annotates medieval mappaemundi on Digital Mappa. *Used by:* Pinto (Fri). https://en.wikipedia.org/wiki/Virtual_Mappa
+- **Robot Scientist** · automated experimentation · unknown, verified. Automated system that generated and tested hypotheses in yeast genetics. *Used by:* Pink (Sat). https://www.nature.com/articles/nature02236
+- **Clavis Canonum** · canon-law source database · unknown, not found. Reference database of canon-law collections. *Used by:* Witowski (Fri). no public link found
+- **Visual Studio Code** · coding environment · partly, likely. Code editor with Python and Copilot extensions. *Used by:* Dows-Miller (Sat). https://code.visualstudio.com/
+- **Graffiti** · conjecture generator · unknown, verified. Programme that generated graph-theory conjectures. *Used by:* Pink (Sat). https://doi.org/10.1016/0012-365X%2888%2990199-9
+- **TEI-XML (Text Encoding Initiative)** · encoding standard · open, likely. XML standard for encoding scholarly editions of texts. *Used by:* Dows-Miller (Sat). https://tei-c.org/
+- **Pixeum** · exhibit platform · unknown, not found. Platform run by Tom Paper that hosts Pinto's presentations on maps. *Used by:* Pinto (Fri). no public link found
+- **Adobe Lightroom and FileMaker catalogues** · image catalogue · closed, not found. Commercial photo and database software. *Used by:* Pinto (Fri). no public link found
+- **MIME: Medieval Islamic Maps Encyclopedia** · interactive map encyclopedia · unknown, not found. Pinto's 2006 interactive encyclopedia, now running again in the browser. *Used by:* Pinto (Fri). no public link found
+- **Culture Compass** · interactive page · unknown, not found. Interactive page of 275 of the books with their scores on the cultural dimensions. *Used by:* Stefanski (Sat). no public link found
+- **BACON** · law discovery · unknown, verified. System for discovering regularities in physical data. *Used by:* Pink (Sat). https://doi.org/10.7551/mitpress/6090.001.0001
+- **FunSearch** · LLM plus evaluator · unknown, verified. Generative model coupled to a machine-checkable evaluator. *Used by:* Pink (Sat). https://www.nature.com/articles/s41586-023-06924-6
+- **Dharmamitra** · LLM/ML Sanskrit and Buddhist language tools · partly, verified. Nehrdich's machine-learning tools for Sanskrit and other Buddhist languages. *Used by:* Kulkarni (Fri); Nehrdich (Sun). https://dharmamitra.org/
+- **Sanskrit Heritage Platform** · morphological analyser · open, verified. Huet's Sanskrit reader, segmenter and morphological analyser. *Used by:* Kulkarni (Fri). https://sanskrit.inria.fr/
+- **DISSINET (Dissident Networks Project)** · network analysis · partly, likely. Masaryk University ERC project that structures inquisition records as data. Not named in the abstract; the team's known platform. *Used by:* Zbíral (Sat). https://is.muni.cz/publication/2508538/en/Automating-the-inquisition-AI-data-capture-of-dissident-interactions-described-in-heresy-trial-records/Laurence-John-Shaw-Hampejs-Kotze-Zbiral
+- **Kraken** · OCR/HTR engine · open, likely. Open OCR/HTR engine used for historical scripts. *Used by:* Brisson (Fri); Kiessling, Rabus (Sun). https://github.com/mittagessen/kraken
+- **HTR on Italian account books (tool not named in abstract)** · OCR/HTR model · unknown, not found. An HTR platform tested on fifteenth-century account books; the abstract names no product. *Used by:* Morreale (Fri). no public link found
+- **Polyscriptor** · OCR/HTR model · open, verified. Multi-engine HTR/ATR toolkit (web app, PyQt6 GUI, CLI) for historical manuscripts, mainly Cyrillic, built with agentic coding. *Used by:* Rabus (Sun). https://github.com/achimrabus/polyscriptor
+- **Polyscriptor HTR demo (Hugging Face Space)** · OCR/HTR model · open, likely. Curated hosted demo of Polyscriptor offering CRNN-CTC, TrOCR, Qwen3-VL and Kraken engines. *Used by:* Rabus (Sun). https://achimrabus-polyscriptor-htr-demo.hf.space/
+- **Python 3.11+** · programming language · open, likely. Programming language runtime required for the workshop project. *Used by:* Dows-Miller (Sat). https://www.python.org/
+- **Aristotelian Search Engine** · retrieval/RAG · unknown, not found. Working semantic search and deep-research system for Greek, Arabic, Hebrew and Latin. *Used by:* Nehrdich (Sun). no public link found
+- **Saṃsādhanī** · rule-based Sanskrit NLP platform · open, verified. Hyderabad platform for Sanskrit segmentation, morphology and parsing. *Used by:* Kulkarni (Fri). https://sanskrit.uohyd.ac.in/scl/
+- **Cyc** · symbolic knowledge base · closed, likely. Long-running hand-built common-sense knowledge base. *Used by:* Kulkarni (Fri). https://www.cyc.com/
+- **Eureqa** · symbolic regression · unknown, verified. Symbolic-regression system for finding laws in data. *Used by:* Pink (Sat). https://www.science.org/doi/10.1126/science.1165893
+- **KITAB / OpenITI web application** · text-reuse search platform · open, likely. KITAB's explorer for OpenITI texts and text reuse. *Used by:* Savant (Fri). https://kitab-project.org/explore
+- **GitHub Desktop** · version control · open, likely. GUI client for Git and GitHub. *Used by:* Dows-Miller (Sat). https://desktop.github.com/
+
+## Methods (training, adaptation, workflow) (25)
+
+- **Agentic coding tools for scholarly editions (not named in abstract)** · agentic coding · unknown, not found. Coding agents used to build digital editions of Homer and Aristotle; the abstract lists no products. *Used by:* Boyer (Fri). no public link found
+- **Agentic enrichment of text and metadata** · agentic coding · partly, likely. Agents add structure and metadata to corpus texts to enable new navigation. *Used by:* Sturgeon (Sun). https://ctext.org
+- **Epistemic loss** · conceptual framework · unknown, not found. Concept for the weakening of information, distinctions and context as evidence moves between digital representations and research environments. *Used by:* Bartliff (Sat). no public link found
+- **PARSEME 2.0 annotation guidelines** · data augmentation · open, verified. Universal decision-tree guidelines for annotating multi-word expressions. *Used by:* Fendel (Sun). https://parsemefr.lis-lab.fr/parseme-st-guidelines/2.0/
+- **Tibetan normalisation pipeline (rules, seq2seq, KenLM) and gold test data** · data augmentation · open, likely. Rule-based, seq2seq and KenLM-based normalisation of diplomatic Tibetan, with data augmented from about 10,000 pairs to over a million. *Used by:* Meelen (Fri). https://github.com/pagantibet/normalisation
+- **Generative translation and summarisation of pre-modern Chinese** · fine-tuning · partly, likely. LLM translation and contextualisation in modern languages. *Used by:* Sturgeon (Sun). https://ctext.org
+- **Work-reference detection and identification pipeline** · fine-tuning · unknown, not found. A trained model that detects whether a span cites a written work, with identification of which work evaluated separately. *Used by:* Savant (Fri). no public link found
+- **SRP (global reassembly)** · LLM-assisted layout reconstruction · unknown, not found. Fuses fragment images, edge maps and OCR text to predict adjacency, then an LLM reasons under placement constraints to build whole pages. *Used by:* X. Li (Fri). no public link found
+- **LLM-assisted OCR correction (China-West corpus)** · post-correction · unknown, not found. Rules-based plus LLM correction of OCR with scholarly review. *Used by:* Y. Li (Fri). no public link found
+- **Time Resolved Variable (TRV) prompting** · prompting · open, likely. Prompting that encodes sequences of categories onto numerical scales to generate sparse historical variables compactly. *Used by:* Celli (Sat). https://github.com/facells/fabio-celli-publications
+- **LLM-assisted extraction with human validation** · prompting/coding with LLM · unknown, not found. Prompt-designed classification and extraction, checked against independent human coding on random samples. *Used by:* Zbíral; Brys; Shaw; Kotzé (Sat). no public link found
+- **Vibe-coding (LLM-directed code writing)** · prompting/coding with LLM · unknown, verified. Directing an LLM to write, run and improve code by natural-language instruction. *Used by:* Dows-Miller (Sat). https://github.com/dowsmiller/vibecoding
+- **Grounded-theory three-level coding (open, axial, selective)** · qualitative coding · unknown, not found. Qualitative method that organises data into categories through three coding levels. *Used by:* Li; Qu (Sat). no public link found
+- **Embedding retrieval and RAG over ctext** · retrieval/RAG · partly, likely. AI-assisted retrieval of relevant passages in the corpus. *Used by:* Sturgeon (Sun). https://ctext.org
+- **Karpathy LLM Wiki pattern** · retrieval/RAG · open, likely. A pattern for a personal knowledge base of markdown files that an LLM ingests, queries and lints, published as a gist by Andrej Karpathy in April 2026. *Used by:* Grant (Fri). https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+- **LLM-assisted source inventory of quotations (Pseudo-Isidore pilot)** · retrieval/RAG · unknown, not found. Automatic detection of biblical, patristic and canonistic quotations, separating Vulgate, Vetus Latina and Father-mediated wording; model not named. *Used by:* Witowski (Fri). no public link found
+- **Open embedding model + small gold benchmark (for Greek, Arabic, Hebrew, Latin)** · retrieval/RAG · open, not found. Off-the-shelf open embedder evaluated on a small hand-built gold benchmark. *Used by:* Nehrdich (Sun). no public link found
+- **SimCLR** · self-supervised contrastive learning · open, verified. Contrastive self-supervised image representation learning. *Used by:* X. Li (Fri). https://arxiv.org/abs/2002.05709
+- **VICReg writer-retrieval model (Brisson fork)** · self-supervised representation learning · open, likely. VICReg self-supervised learning adapted to learn handwriting representations without writer labels. *Used by:* Brisson (Fri). https://github.com/colibrisson/vicreg
+- **Cliodynamics / structural-demographic theory** · simulation · unknown, not found. Field combining historical data with complexity-science models of political instability. *Used by:* Turchin; Celli (Sat). no public link found
+- **Anti-fabrication protocol for LLM-assisted lexicography** · system prompt · unknown, not found. Proposed protocol to guard against invented semantic continuity. *Used by:* Zhilina (Sun). no public link found
+- **Frontier LLMs (unnamed) in a three-condition test** · system prompt · closed, not found. Dictionary definitions given unattributed, source-attributed, and with a question about modern meaning. *Used by:* Zhilina (Sun). no public link found
+- **System prompts and alignment (hidden instructions)** · system prompt · unknown, not found. Provider-side alignment and undisclosed system prompts that shape model answers. *Used by:* Kiessling (Sun). no public link found
+- **Innovation Wedge** · text-based index · open, verified. Ratio built from LLM scores of books (hierarchy and fear of the untried over individualism and patience), accumulated into inherited stocks. *Used by:* Stefanski (Sat). https://ideas.repec.org/p/san/econdp/2602.html
+- **Tokenisation and text encoding for historical text** · tokeniser · unknown, not found. How Unicode encoding and subword tokenisation erase historically significant distinctions during preprocessing. *Used by:* Kiessling (Sun). no public link found
+
+## Papers (19)
+
+- **End Times: Elites, Counter-Elites, and the Path of Political Disintegration (2023)** · book · closed, not found. Turchin's book on elite overproduction and political disintegration. *Used by:* Turchin (Sat). no public link found
+- **Seshat-perspective paper (CLiC-it 2026)** · conference paper · open, verified. Paper describing perspectivist LLM annotation of Seshat and its validation. *Used by:* Celli (Sat). https://github.com/facells/fabio-celli-publications/blob/main/docs/2026_perspective_seshat_clicit26.pdf
+- **MITRA: A Large-Scale Parallel Corpus and Multilingual Pretrained Language Model... (Nehrdich and Keutzer)** · corpus · open, likely. Paper releasing MITRA-parallel, Gemma 2 MITRA, MITRA-MT, MITRA-E and a similarity benchmark. *Used by:* Nehrdich (Sun). https://arxiv.org/abs/2601.06400v1
+- **Huang et al. 2023, transformer standardiser for Scottish Gaelic** · data augmentation · open, verified. Transformer system that standardises historical Gaelic orthography, trained on augmented data. *Used by:* Meelen (Fri). https://www.isca-archive.org/sigul_2023/huang23_sigul.html
+- **Cultural Capital and the Productivity of Ideas: Evidence from Historical Texts** · discussion paper · open, verified. St Andrews Economics Discussion Paper 2602 (23 July 2026) scoring 23,000 books on six cultural dimensions to build the Innovation Wedge. *Used by:* Stefanski (Sat). https://ideas.repec.org/p/san/econdp/2602.html
+- **MITRA-lexicon / lexica and taggers (Nehrdich, Harimoto, Sellmer, Hellwig)** · fine-tuning · unknown, likely. Paper on lexica derived from the MITRA model and data. *Used by:* Nehrdich (Sun). https://arxiv.org/abs/2610.25934
+- **Fragment edge-matching ('reunion helper') paper** · fragment matching · open, verified. Boundary-geometry matching of Dunhuang fragments (npj Heritage Science 2024). *Used by:* X. Li (Fri). https://heritagesciencejournal.springeropen.com/articles/10.1186/s40494-024-01150-3
+- **Handwriting-style matching paper (DSE-Rejoin, 63,608 images)** · handwriting similarity · open, verified. Patch-level handwriting matching for rejoining fragments (Nature Heritage Science 2025). *Used by:* X. Li (Fri). https://www.nature.com/articles/s40494-025-02078-y
+- **AnandaSky paper (LT4HALA 2026)** · HTR · open, verified. Paper describing the alignment-based training of the Chinese HTR model. *Used by:* Brisson (Fri). https://aclanthology.org/2026.lt4hala-1.32/
+- **Meelen & Griffiths 2025, HTR for Tibetan manuscripts (JOHD)** · HTR / ground truth · open, verified. Open data paper with Transkribus models, code and ground truth for Tibetan manuscripts. *Used by:* Meelen (Fri). https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.388
+- **Meelen & Griffiths 2026, Revue d'Études Tibétaines 84 (PT-Ume7 and HTR benchmarking)** · HTR evaluation · open, verified. Reports the Ume HTR models and shows models from other projects failing on her manuscripts. *Used by:* Meelen (Fri). https://d1i1jdw69xsqx0.cloudfront.net/digitalhimalaya/collections/journals/ret/pdf/ret_84_10.pdf
+- **Automating the inquisition: AI data capture of dissident interactions described in heresy trial records (2025)** · journal article · unknown, likely. Earlier paper by the same team on AI data capture from inquisition records. *Used by:* Zbíral; Shaw; Kotzé (Sat). https://is.muni.cz/publication/2508538/en/Automating-the-inquisition-AI-data-capture-of-dissident-interactions-described-in-heresy-trial-records/Laurence-John-Shaw-Hampejs-Kotze-Zbiral
+- **Celli publications repository** · paper collection · open, verified. Papers and data for the Seshat, SD-phase and LLM-annotation use cases. No file on toxic language across the 13th-20th centuries was found. *Used by:* Celli (Sat). https://github.com/facells/fabio-celli-publications
+- **QUINCUNX paper (Zenodo, 12 Aug 2026)** · preprint · open, verified. Version of record describing the engine and the EDH test (25 conjectures, 19 survived). *Used by:* Pink (Sat). https://doi.org/10.5281/zenodo.21908761
+- **The Yeoman's Portfolio: Measuring Historical Risk Preferences Using Crop Choice** · preprint · open, verified. Method estimating risk preferences from crop choice using a portfolio model and machine-learning crop-return prediction. *Used by:* Levin; Vidart (Sat). https://arxiv.org/abs/2608.15876
+- **ByT5-Sanskrit paper (EMNLP Findings 2024)** · seq2seq model · open, verified. One Model is All You Need: ByT5-Sanskrit, a Unified Model for Sanskrit NLP Tasks. *Used by:* Nehrdich (Sun). https://aclanthology.org/2024.findings-emnlp.805
+- **Meelen, Nehrdich & Keutzer 2024, Breakthroughs in Tibetan NLP and Digital Humanities** · survey · open, likely. Survey of Tibetan NLP, in Revue d'Études Tibétaines 72. *Used by:* Meelen (Fri). https://d1i1jdw69xsqx0.cloudfront.net/digitalhimalaya/collections/journals/ret/pdf/ret_72_03.pdf
+- **Griffiths & Meelen 2025, How 'Pagan' Is My Text?** · text classification · open, verified. Pipeline from HTR through normalisation to embedding-based classification of Buddhist, Bon and Pagan texts. *Used by:* Meelen (Fri). https://anthology.ach.org/volumes/vol0003/how-pagan-is-my-text-information-extraction-from/
+- **Grant, Using LLMs in Scholarship (slides)** · workshop slides · open, verified. 136-page slide deck on prompts, context management, harnesses and a Karpathy-style source wiki. *Used by:* Grant (Fri). https://www.arsinq.com/inferpedia/static/arsinquirendi/slides/grant-using-llms-in-scholarship-2026.pdf
