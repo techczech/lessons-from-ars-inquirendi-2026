@@ -2,7 +2,7 @@
  "title": "Ars Inquirendi 2026: models, datasets, tools, methods and papers named by participants",
  "date": "2026-11-20",
  "sources": "arsinq.com programme and abstracts (public, read 20 Nov 2026); linked slides, papers and repositories; Graphosphere I recordings (machine transcripts); Meelen keynote notes. Compiled by three Sonnet research agents; URLs checked by web search, not by a person.",
- "fields": "type: model|dataset|archive|tool|method|paper|benchmark; open: open|partly|closed|unknown; confidence: verified|likely|not found (applies to the identification and URL)",
+ "fields": "type: skill|model|dataset|archive|tool|method|paper|benchmark; open: open|partly|closed|unknown; confidence: verified|likely|not found (applies to the identification and URL)",
  "items": [
   {
    "name": "Karpathy LLM Wiki pattern",
@@ -3079,6 +3079,158 @@
     }
    ],
    "id": 160
+  },
+  {
+   "name": "Cyphersolver /writeup skill (with claims-review second reader)",
+   "type": "skill",
+   "subtype": "Claude Code skill",
+   "what": "A Claude Code skill that writes up a finished cipher target on every surface of the site and ledgers, then has a second reader check each page's claims against its sources before it is recorded.",
+   "url": "https://github.com/dbourdeau/cyphersolver/tree/main/.claude/skills/writeup",
+   "licence": "MIT",
+   "open": "open",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Kiessling",
+     "session": "Customizing LLMs (workshop)",
+     "day": "Sun",
+     "use": "Kiessling examines Cyphersolver as a case of an automatically built research database: what human control, generated code and uncertainty look like."
+    }
+   ],
+   "id": 161
+  },
+  {
+   "name": "Cyphersolver /profile skill",
+   "type": "skill",
+   "subtype": "Claude Code skill",
+   "what": "A Claude Code skill that fills a fixed-field profile.json per cipher target (system, ciphertexts, what the model was given, solution steps, outcome) as data for a paper on how well LLMs attack historical ciphers.",
+   "url": "https://github.com/dbourdeau/cyphersolver/tree/main/.claude/skills/profile",
+   "licence": "MIT",
+   "open": "open",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Kiessling",
+     "session": "Customizing LLMs (workshop)",
+     "day": "Sun",
+     "use": "Same case study: the skill turns each agent run into checkable evaluation data."
+    }
+   ],
+   "id": 162
+  },
+  {
+   "name": "Cyphersolver CLAUDE.md (repository instructions)",
+   "type": "skill",
+   "subtype": "agent instructions",
+   "what": "Standing instructions for Claude Code in the Cyphersolver repository: layout, shared n-gram language models, and the rule that a target is finished only when written up and checked.",
+   "url": "https://github.com/dbourdeau/cyphersolver/blob/main/CLAUDE.md",
+   "licence": "MIT",
+   "open": "open",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Kiessling",
+     "session": "Customizing LLMs (workshop)",
+     "day": "Sun",
+     "use": "Part of the Cyphersolver case Kiessling critiques."
+    }
+   ],
+   "id": 163
+  },
+  {
+   "name": "Grant's Markdown instruction files (AGENTS.md, style, project, prose charter, ingestion guide, reviewer instructions)",
+   "type": "skill",
+   "subtype": "agent instructions",
+   "what": "Seven Markdown files in five functions that a coding agent reads as standing instructions: repository rules (AGENTS.md), personal writing conventions, project instructions, a prose charter and shape guide for drafting and review, and a document-ingestion guide.",
+   "url": "https://www.arsinq.com/inferpedia/static/arsinquirendi/slides/grant-using-llms-in-scholarship-2026.pdf",
+   "licence": "not stated",
+   "open": "partly",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Grant",
+     "session": "Using LLMs in Scholarship (workshop)",
+     "day": "Fri",
+     "use": "Grant shows how saved instructions enter the model's context only when the harness loads them, using his international-law projects run in Codex."
+    }
+   ],
+   "id": 164
+  },
+  {
+   "name": "Grant's scholarly legal prose charter",
+   "type": "skill",
+   "subtype": "agent instructions",
+   "what": "A standing instruction for scholarly legal prose, e.g. claims stated flat and bounded afterwards, no claim stronger than its authority, inferences attributed to the article not the source.",
+   "url": "https://www.arsinq.com/inferpedia/static/arsinquirendi/slides/grant-using-llms-in-scholarship-2026.pdf",
+   "licence": "not stated",
+   "open": "partly",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Grant",
+     "session": "Using LLMs in Scholarship (workshop)",
+     "day": "Fri",
+     "use": "Shown in the slides as an example of a saved instruction that shapes drafting and review; the slides say the complete file accompanies them."
+    }
+   ],
+   "id": 165
+  },
+  {
+   "name": "Vibe-coding workshop prompts (travel prompts, pre-plan, build plan)",
+   "type": "skill",
+   "subtype": "prompt set",
+   "what": "Three prompt files: a pair of travel-planning prompts showing how specificity changes output, a pre-planning brief for a TEI-XML transcription editor for GitHub Copilot's Plan mode, and the resulting build plan.",
+   "url": "https://github.com/dowsmiller/vibecoding/tree/main/prompts",
+   "licence": "not stated",
+   "open": "open",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Dows-Miller",
+     "session": "Vibe-Coding for Medievalists (workshop)",
+     "day": "Sat",
+     "use": "Participants use them to plan and build a TEI page editor with Copilot, starting from a written brief rather than an open request."
+    }
+   ],
+   "id": 166
+  },
+  {
+   "name": "Kraken AGENTS.md (AI contribution policy)",
+   "type": "skill",
+   "subtype": "agent instructions",
+   "what": "Instructions for coding agents and contributors to Kraken: AI-generated code is allowed, but contributors must fully understand, explain and maintain every line.",
+   "url": "https://github.com/mittagessen/kraken/blob/main/AGENTS.md",
+   "licence": "Apache 2.0",
+   "open": "open",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Kiessling",
+     "session": "Customizing LLMs (workshop)",
+     "day": "Sun",
+     "use": "Kraken is Kiessling's OCR/HTR engine; the file sets the project's rules for AI-assisted contributions."
+    }
+   ],
+   "id": 167
+  },
+  {
+   "name": "Polyscriptor Qwen3-VL prompts (qwen3_prompts.py)",
+   "type": "skill",
+   "subtype": "prompt set",
+   "what": "The prompts Polyscriptor sends to the Qwen3-VL vision-language model for handwriting recognition.",
+   "url": "https://github.com/achimrabus/polyscriptor/blob/main/qwen3_prompts.py",
+   "licence": "MIT",
+   "open": "open",
+   "confidence": "verified",
+   "mentions": [
+    {
+     "who": "Rabus",
+     "session": "Sovereign Models",
+     "day": "Sun",
+     "use": "Rabus's open-weight alternative to commercial models for HTR; the prompts are part of the toolkit."
+    }
+   ],
+   "id": 168
   }
  ]
 }

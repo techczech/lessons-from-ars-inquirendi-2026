@@ -1,15 +1,25 @@
 ---
-title: "Ars Inquirendi 2026: models, datasets, tools, methods and papers"
+title: "Ars Inquirendi 2026: skills, models, datasets, tools, methods and papers"
 date: 2026-11-20
-register: FOR DOMINIK
-source: conference-resources-2026.json (same data); see its "sources" field
+source: data/conference-resources-2026.json (same data)
 ---
 
 # Ars Inquirendi 2026: what participants named
 
-160 distinct items from all three days (166 mentions before merging duplicates). By type: Models 35, Datasets and corpora 23, Archives and collections 19, Benchmarks 5, Tools and platforms 34, Methods (training, adaptation, workflow) 25, Papers 19. Openness: open 78, unknown 46, closed 19, partly 17.
+168 distinct items from all three days. By type: Skills, prompts and agent instructions 8, Models 35, Datasets and corpora 23, Archives and collections 19, Benchmarks 5, Tools and platforms 34, Methods (training, adaptation, workflow) 25, Papers 19. Openness: open 84, unknown 46, partly 19, closed 19.
 
-Compiled from the public programme and abstracts, linked slides, papers and repositories, the Graphosphere I recordings and the Meelen keynote notes. Links were found by web search and not checked by a person. "Not found" means no public link was found, often because a talk names a method without a product. Data: `conference-resources-2026.json` and `.csv` in this folder.
+Compiled from the public programme and abstracts, linked slides, papers and repositories, the Graphosphere I recordings and notes on the Meelen keynote. Skills and agent instructions were found by searching participants' public repositories and workshop slides for SKILL.md, AGENTS.md, CLAUDE.md and prompt files. Links were found by web search and not checked by a person. Searchable version: index.html.
+
+## Skills, prompts and agent instructions (8)
+
+- **Cyphersolver CLAUDE.md (repository instructions)** · agent instructions · open, verified. Standing instructions for Claude Code in the Cyphersolver repository: layout, shared n-gram language models, and the rule that a target is finished only when written up and checked. *Used by:* Kiessling (Sun). https://github.com/dbourdeau/cyphersolver/blob/main/CLAUDE.md
+- **Grant's Markdown instruction files (AGENTS.md, style, project, prose charter, ingestion guide, reviewer instructions)** · agent instructions · partly, verified. Seven Markdown files in five functions that a coding agent reads as standing instructions: repository rules (AGENTS.md), personal writing conventions, project instructions, a prose charter and shape guide for drafting and review, and a document-ingestion guide. *Used by:* Grant (Fri). https://www.arsinq.com/inferpedia/static/arsinquirendi/slides/grant-using-llms-in-scholarship-2026.pdf
+- **Grant's scholarly legal prose charter** · agent instructions · partly, verified. A standing instruction for scholarly legal prose, e.g. claims stated flat and bounded afterwards, no claim stronger than its authority, inferences attributed to the article not the source. *Used by:* Grant (Fri). https://www.arsinq.com/inferpedia/static/arsinquirendi/slides/grant-using-llms-in-scholarship-2026.pdf
+- **Kraken AGENTS.md (AI contribution policy)** · agent instructions · open, verified. Instructions for coding agents and contributors to Kraken: AI-generated code is allowed, but contributors must fully understand, explain and maintain every line. *Used by:* Kiessling (Sun). https://github.com/mittagessen/kraken/blob/main/AGENTS.md
+- **Cyphersolver /profile skill** · Claude Code skill · open, verified. A Claude Code skill that fills a fixed-field profile.json per cipher target (system, ciphertexts, what the model was given, solution steps, outcome) as data for a paper on how well LLMs attack historical ciphers. *Used by:* Kiessling (Sun). https://github.com/dbourdeau/cyphersolver/tree/main/.claude/skills/profile
+- **Cyphersolver /writeup skill (with claims-review second reader)** · Claude Code skill · open, verified. A Claude Code skill that writes up a finished cipher target on every surface of the site and ledgers, then has a second reader check each page's claims against its sources before it is recorded. *Used by:* Kiessling (Sun). https://github.com/dbourdeau/cyphersolver/tree/main/.claude/skills/writeup
+- **Polyscriptor Qwen3-VL prompts (qwen3_prompts.py)** · prompt set · open, verified. The prompts Polyscriptor sends to the Qwen3-VL vision-language model for handwriting recognition. *Used by:* Rabus (Sun). https://github.com/achimrabus/polyscriptor/blob/main/qwen3_prompts.py
+- **Vibe-coding workshop prompts (travel prompts, pre-plan, build plan)** · prompt set · open, verified. Three prompt files: a pair of travel-planning prompts showing how specificity changes output, a pre-planning brief for a TEI-XML transcription editor for GitHub Copilot's Plan mode, and the resulting build plan. *Used by:* Dows-Miller (Sat). https://github.com/dowsmiller/vibecoding/tree/main/prompts
 
 ## Models (35)
 
@@ -19,6 +29,7 @@ Compiled from the public programme and abstracts, linked slides, papers and repo
 - **MITRA-Qwen3.5 embedder (9B and 2B)** · embedding model · open, likely. Multilingual retrieval embedders trained with contrastive finetuning on parallel Sanskrit, Tibetan, Chinese, Pali and English data. *Used by:* Nehrdich (Sun). https://huggingface.co/buddhist-nlp/mitra-qwen35-embedder
 - **SikuBERT** · embedding model · open, verified. BERT model pre-trained on the Siku Quanshu corpus of classical Chinese. *Used by:* Li; Qu (Sat). https://huggingface.co/SIKU-BERT/sikubert
 - **SikuRoBERTa** · embedding model · open, likely. RoBERTa-style companion to SikuBERT from the same group (Nanjing Agricultural University). *Used by:* Li; Qu (Sat). https://huggingface.co/SIKU-BERT/sikuroberta
+- **Transkribus (platform; PaganTibet Ume models trained in it)** · HTR platform and models · open, likely. Commercial handwriting-recognition platform; Meelen's PaganTibet Ume models are trained and shared in it (PT-Ume7: 3.71% character error). *Used by:* Meelen (Fri); Rabus (Sun). https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.388
 - **U-Net** · image segmentation · open, verified. Convolutional segmentation network. *Used by:* X. Li (Fri). https://arxiv.org/abs/1505.04597
 - **ChatGPT 5.6 Sol** · LLM · closed, not found. OpenAI LLM. *Used by:* Pink (Sat). no public link found
 - **Claude (Anthropic)** · LLM · closed, likely. Anthropic's LLM family. *Used by:* Savant (Fri); Pink (Sat). https://www.anthropic.com/claude
@@ -40,7 +51,6 @@ Compiled from the public programme and abstracts, linked slides, papers and repo
 - **CHAT models and Siku HTR models (Brisson)** · OCR/HTR model · open, likely. Brisson's released Chinese handwriting recognition models. *Used by:* Brisson (Fri). https://github.com/colibrisson/CHAT_models
 - **dots.ocr** · OCR/HTR model · open, likely. Specialised document-OCR vision-language model from rednote-hilab. *Used by:* Y. Li (Fri). https://github.com/rednote-hilab/dots.ocr
 - **Polyscriptor CRNN-CTC and TrOCR models (Church Slavonic, Ukrainian, Prosta Mova, Glagolitic, Russian)** · OCR/HTR model · open, likely. Line-level HTR models with reported CER of about 2.9 to 6.9 percent. *Used by:* Rabus (Sun). https://github.com/achimrabus/polyscriptor
-- **Transkribus (platform; PaganTibet Ume models trained in it)** · HTR platform and models · open, likely. Handwriting-recognition models trained in Transkribus on Tibetan Ume manuscripts; PT-Ume7 reaches 3.71% character error. *Used by:* Meelen (Fri); Rabus (Sun). https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.388
 - **ByT5-Sanskrit** · seq2seq model · open, likely. Byte-level ByT5 model for Sanskrit segmentation, lemmatisation, tagging, parsing and OCR post-correction. *Used by:* Nehrdich (Sun). https://github.com/sebastian-nehrdich/byt5-sanskrit-analyzers
 - **MMS (Massively Multilingual Speech)** · speech model · partly, likely. Meta's multilingual speech recognition models. *Used by:* Meelen (Fri). https://github.com/facebookresearch/fairseq/tree/main/examples/mms
 - **Wav2Vec2** · speech model · open, likely. Facebook's self-supervised speech representation model. *Used by:* Meelen (Fri). https://arxiv.org/abs/2006.11477
