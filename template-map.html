@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ars Inquirendi pipeline map</title>
+<meta name="description" content="Where each model, dataset, tool, method and skill named at Ars Inquirendi 2026 sits in the pipeline from sources to publication.">
+<style>
+:root{--ink:#1d1d1b;--muted:#6b675f;--line:#e2ddd2;--surface:#fff;--bg:#f7f5f0;--accent:#8a3b12;--blue:#2f6fb5;--green:#2e7d4f;--amber:#a26a00;--red:#b03a2e;--hi:#fff1d6;--soft:#f1ede4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#e9edf0;--muted:#a39d91;--line:#2b343b;--surface:#171c20;--bg:#111518;--accent:#f0a56b;--blue:#7fa9dc;--green:#7cc39a;--amber:#e0b45a;--red:#f08b7e;--hi:#3b2e17;--soft:#1e252a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--blue)}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 16px}
+h1{font-size:clamp(19px,2.4vw,26px);margin:0;line-height:1.2}
+.sub{color:var(--muted);font-size:13.5px;margin:2px 0 8px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#q{flex:1 1 220px;font:inherit;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink)}
+select,.btn{font:inherit;font-size:13.5px;padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+.btn.on{background:var(--ink);color:var(--bg)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;font-size:12.5px;color:var(--muted);margin-top:8px;align-items:center}
+.legend span{display:inline-flex;align-items:center;gap:4px}
+.sw{width:10px;height:10px;border-radius:2px;display:inline-block}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.d-open{background:var(--green)}.d-partly{background:var(--amber)}.d-closed{background:var(--red)}.d-unknown{background:transparent;border:1.5px solid var(--muted)}
+main{padding:14px 16px 60px}
+.insights{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:10px;margin:0 0 16px}
+.ins{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:9px 12px;font-size:14px}
+.ins b{display:block;font-size:14.5px;margin-bottom:2px}
+.flow{display:grid;grid-template-columns:repeat(8,minmax(150px,1fr));gap:0;overflow-x:auto;padding-bottom:6px}
+.stage{position:relative;padding:0 8px}
+.stage:not(:last-child)::after{content:'';position:absolute;right:-7px;top:14px;border:7px solid transparent;border-left:9px solid var(--muted);opacity:.5}
+.sh{background:var(--ink);color:var(--bg);border-radius:8px;padding:6px 9px;margin-bottom:6px}
+.sh b{display:block;font-size:14px}
+.sh span{font-size:11.5px;opacity:.8;display:block;line-height:1.3}
+.sh i{font-style:normal;font-size:11.5px;opacity:.75}
+.col{display:flex;flex-direction:column;gap:5px}
+.band{margin-top:18px;background:var(--soft);border-radius:12px;padding:10px 12px}
+.band h3{margin:0 0 2px;font-size:15px}
+.band p{margin:0 0 8px;font-size:12.5px;color:var(--muted)}
+.band .col{flex-direction:row;flex-wrap:wrap}
+.band .chip{flex:0 1 220px}
+.chip{display:block;text-align:left;width:100%;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--tc);border-radius:0 7px 7px 0;padding:5px 7px;cursor:pointer;font:inherit;color:inherit;transition:opacity .15s,box-shadow .15s}
+.chip:hover{box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.chip .n{display:flex;gap:5px;align-items:baseline;font-size:13px;font-weight:650;line-height:1.25}
+.chip .n .dot{transform:translateY(-1px)}
+.chip .r{display:block;font-size:11.5px;color:var(--muted);margin-top:1px;line-height:1.3}
+.chip.also{border-style:dashed;border-left-style:solid;opacity:.85}
+.chip.also .n::after{content:' \2197';font-weight:400;color:var(--muted)}
+.chip.dim{opacity:.18}
+.chip.sel{box-shadow:0 0 0 2px var(--accent)}
+.chip.hit{box-shadow:0 0 0 2px var(--blue)}
+#panel{position:fixed;right:0;top:0;bottom:0;width:min(420px,100%);background:var(--surface);border-left:1px solid var(--line);box-shadow:-8px 0 30px rgba(0,0,0,.15);z-index:20;padding:16px 18px;overflow:auto;transform:translateX(105%);transition:transform .2s}
+#panel.open{transform:none}
+#panel h2{font-size:18px;margin:0 30px 6px 0;line-height:1.3}
+#panel .x{position:absolute;right:12px;top:10px;border:0;background:none;font-size:22px;cursor:pointer;color:var(--muted)}
+.b{font-size:11.5px;font-weight:700;border-radius:999px;padding:0 8px;border:1px solid var(--line);color:var(--muted);margin-right:4px}
+#panel ul{padding-left:18px}#panel li{margin:6px 0;font-size:14px}
+.who{border:0;background:none;color:var(--blue);font:inherit;font-weight:650;cursor:pointer;padding:0}
+.status{font-size:13px;color:var(--muted);margin:0 0 10px}
+[hidden]{display:none!important}
+@media (max-width:900px){.flow{grid-template-columns:1fr;overflow:visible}.stage{padding:0 0 12px}.stage:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-4px;border:7px solid transparent;border-top:9px solid var(--muted)}}
+</style>
+</head>
+<body>
+<header>
+<h1>Ars Inquirendi 2026: pipeline map</h1>
+<p class="sub">Everything participants named, placed where it works on the way from sources to publication. Click any box for details; pick a speaker to see their pipeline. <a href="index.html">Searchable list →</a></p>
+<div class="bar"><input id="q" type="search" placeholder="Highlight by name, speaker, use  ( / )" autocomplete="off">
+<select id="who"><option value="">All speakers</option></select>
+<select id="day"><option value="">All days</option><option value="Fri">Friday</option><option value="Sat">Saturday</option><option value="Sun">Sunday</option></select>
+<button class="btn" id="openonly">Open only</button>
+<button class="btn" id="alsobtn">Show secondary placements</button></div>
+<div class="legend" id="legend"></div>
+</header>
+<main>
+<p class="status" id="status"></p>
+<div class="insights" id="ins"></div>
+<div class="flow" id="flow"></div>
+<div id="bands"></div>
+</main>
+<aside id="panel" aria-live="polite"><button class="x" id="px" aria-label="Close">×</button><div id="pc"></div></aside>
+<script>
+var DATA=/*DATA*/null;var I=DATA.items;
+var STAGES=[['sources','Sources','collections, archives, libraries'],['capture','Capture','images, layout, fragments, hands'],['reading','Reading','OCR, HTR, speech to text'],['normalisation','Normalisation','correction, standard spelling, lemmas'],['annotation','Annotation','tagging, extraction, coding, translation'],['search','Search','retrieval, embeddings, citations'],['analysis','Analysis','classification, scoring, inference'],['publication','Publication','editions, sites, catalogues']];
+var BANDS=[['build','Build: coding agents, skills, instructions','How participants built their tools and kept agents on track.'],['models','Models and training','Base models and how they were adapted: continued pretraining, fine-tuning, embeddings.'],['evaluation','Evaluation','Benchmarks, gold standards, agreement and fidelity checks.']];
+var TC={skill:'#0f7b7b',model:'#2f6fb5',dataset:'#2e7d4f',archive:'#7a6a55',benchmark:'#a26a00',tool:'#8a3b12',method:'#7a4fa3',paper:'#5b6b7a'};
+var TN={skill:'skill / prompt',model:'model',dataset:'dataset',archive:'archive',benchmark:'benchmark',tool:'tool',method:'method',paper:'paper'};
+function G(i){return document.getElementById(i)}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function norm(s){return String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()}
+I.forEach(function(r){r.sp=[];r.days=[];r.mentions.forEach(function(m){String(m.who||'').split(/;|,| and /).forEach(function(w){w=w.trim();if(w&&r.sp.indexOf(w)<0)r.sp.push(w)});if(r.days.indexOf(m.day)<0)r.days.push(m.day)});r.hay=norm([r.name,r.subtype,r.what,r.role,r.sp.join(' '),r.mentions.map(function(m){return m.session+' '+m.use}).join(' ')].join(' '))});
+var byId={};I.forEach(function(r){byId[r.id]=r});
+var st={q:'',who:'',day:'',open:false,also:false,sel:null};
+var allSp=[];I.forEach(function(r){r.sp.forEach(function(w){if(allSp.indexOf(w)<0)allSp.push(w)})});allSp.sort(function(a,b){return a.localeCompare(b)});
+G('who').innerHTML+=allSp.map(function(w){return '<option>'+esc(w)+'</option>'}).join('');
+G('legend').innerHTML=Object.keys(TC).map(function(t){return '<span><i class="sw" style="background:'+TC[t]+'"></i>'+TN[t]+'</span>'}).join('')+'<span style="margin-left:8px"><i class="dot d-open"></i>open</span><span><i class="dot d-partly"></i>partly</span><span><i class="dot d-closed"></i>closed</span><span><i class="dot d-unknown"></i>unknown</span><span>dashed = secondary placement</span>';
+function lit(r){if(st.who&&r.sp.indexOf(st.who)<0)return false;if(st.day&&r.days.indexOf(st.day)<0)return false;if(st.open&&r.open!=='open')return false;if(st.q){var w=norm(st.q).split(/\s+/).filter(Boolean);for(var i=0;i<w.length;i++)if(r.hay.indexOf(w[i])<0)return false}return true}
+function chip(r,also){return '<button class="chip'+(also?' also':'')+'" data-id="'+r.id+'" style="--tc:'+(TC[r.type]||'#888')+'" title="'+esc(TN[r.type]+' · '+r.open)+'"><span class="n"><i class="dot d-'+esc(r.open)+'"></i>'+esc(r.name)+'</span><span class="r">'+esc(r.role||r.subtype)+'</span></button>'}
+function items(key){var p=I.filter(function(r){return r.stage===key});var a=st.also?I.filter(function(r){return r.stage!==key&&(r.also||[]).indexOf(key)>=0}):[];var ord=['skill','model','tool','method','dataset','archive','benchmark','paper'];p.sort(function(x,y){return ord.indexOf(x.type)-ord.indexOf(y.type)||x.name.localeCompare(y.name)});return p.map(function(r){return chip(r,false)}).join('')+a.map(function(r){return chip(r,true)}).join('')}
+function build(){G('flow').innerHTML=STAGES.map(function(s){var n=I.filter(function(r){return r.stage===s[0]}).length;return '<div class="stage"><div class="sh"><b>'+s[1]+' <i>'+n+'</i></b><span>'+s[2]+'</span></div><div class="col">'+items(s[0])+'</div></div>'}).join('');
+ G('bands').innerHTML=BANDS.map(function(b){var n=I.filter(function(r){return r.stage===b[0]}).length;return '<section class="band"><h3>'+b[1]+' ('+n+')</h3><p>'+b[2]+'</p><div class="col">'+items(b[0])+'</div></section>'}).join('');
+ document.querySelectorAll('.chip').forEach(function(c){c.onclick=function(){show(+c.dataset.id)}});apply()}
+function apply(){var any=st.q||st.who||st.day||st.open,n=0;document.querySelectorAll('.chip').forEach(function(c){var r=byId[c.dataset.id],l=lit(r);if(l&&!c.classList.contains('also'))n++;c.classList.toggle('dim',!!any&&!l);c.classList.toggle('hit',!!any&&l&&!!(st.q||st.who));c.classList.toggle('sel',st.sel===r.id)});
+ G('status').textContent=any?n+' of '+I.length+' items match'+(st.who?' · '+st.who+"'s pipeline":''):I.length+' items · 8 stages · 3 cross-cutting layers';
+ var h=[];if(st.q)h.push('q='+encodeURIComponent(st.q));if(st.who)h.push('who='+encodeURIComponent(st.who));if(st.day)h.push('day='+st.day);if(st.open)h.push('open=1');if(st.sel)h.push('item='+st.sel);history.replaceState(null,'',h.length?'#'+h.join('&'):location.pathname)}
+function show(id){var r=byId[id];if(!r)return;st.sel=id;var stg=STAGES.concat(BANDS).reduce(function(o,s){o[s[0]]=s[1].split(':')[0];return o},{});
+ G('pc').innerHTML='<h2>'+esc(r.name)+'</h2><div><span class="b" style="color:'+TC[r.type]+'">'+TN[r.type]+'</span><span class="b">'+esc(r.subtype)+'</span><span class="b">'+esc(r.open)+'</span><span class="b">'+esc(r.confidence)+'</span></div><p><b>Stage:</b> '+esc(stg[r.stage])+((r.also||[]).length?' (also '+r.also.map(function(a){return esc(stg[a]||a)}).join(', ')+')':'')+' — '+esc(r.role)+'</p><p>'+esc(r.what)+'</p><ul>'+r.mentions.map(function(m){return '<li>'+String(m.who).split(/;|,| and /).map(function(w){w=w.trim();return w?'<button class="who" data-w="'+esc(w)+'">'+esc(w)+'</button>':''}).join(', ')+' · <span style="color:var(--muted)">'+esc(m.session)+' · '+esc(m.day)+'</span><br>'+esc(m.use)+'</li>'}).join('')+'</ul>'+(r.url&&r.url!=='not found'?'<p><a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.url.replace(/^https?:\/\//,''))+' ↗</a></p>':'<p style="color:var(--muted)"><i>No public link found</i></p>')+(r.licence&&r.licence!=='n/a'?'<p style="font-size:13px;color:var(--muted)">Licence: '+esc(r.licence)+'</p>':'')+'<p><a href="index.html#item-'+r.id+'">Full entry in the list →</a></p>';
+ G('pc').querySelectorAll('.who').forEach(function(b){b.onclick=function(){st.who=b.dataset.w;G('who').value=st.who;apply()}});G('panel').classList.add('open');apply()}
+G('px').onclick=function(){G('panel').classList.remove('open');st.sel=null;apply()};
+var t;G('q').oninput=function(){clearTimeout(t);t=setTimeout(function(){st.q=G('q').value.trim();apply()},120)};
+G('who').onchange=function(){st.who=G('who').value;apply()};G('day').onchange=function(){st.day=G('day').value;apply()};
+G('openonly').onclick=function(){st.open=!st.open;G('openonly').classList.toggle('on',st.open);apply()};
+G('alsobtn').onclick=function(){st.also=!st.also;G('alsobtn').classList.toggle('on',st.also);build()};
+document.addEventListener('keydown',function(e){if(e.key==='/'&&!e.target.closest('input,select')){e.preventDefault();G('q').focus()}if(e.key==='Escape'){if(G('panel').classList.contains('open'))G('px').onclick();else{G('q').value='';st.q='';apply()}}});
+var INS=/*INSIGHTS*/[];G('ins').innerHTML=INS.map(function(x){return '<div class="ins"><b>'+esc(x[0])+'</b>'+esc(x[1])+'</div>'}).join('');
+location.hash.slice(1).split('&').forEach(function(p){var kv=p.split('=');if(kv[0]==='q'){st.q=decodeURIComponent(kv[1]||'');G('q').value=st.q}if(kv[0]==='who'){st.who=decodeURIComponent(kv[1]||'');G('who').value=st.who}if(kv[0]==='day'){st.day=kv[1];G('day').value=st.day}if(kv[0]==='open'){st.open=true;G('openonly').classList.add('on')}if(kv[0]==='item')st.sel=+kv[1]});
+build();if(st.sel)show(st.sel);
+</script>
+</body>
+</html>

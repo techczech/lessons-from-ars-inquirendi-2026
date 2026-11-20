@@ -13,6 +13,7 @@ Notes and data from [Ars Inquirendi 2026](https://www.arsinq.com/), "Querying Pr
   - link to any item with `#item-<id>`
 
   Open the file in a browser; it needs no server.
+- **[map.html](map.html)**: a pipeline map placing every item where it works, from sources through capture, reading, normalisation, annotation, search and analysis to publication, with cross-cutting layers for building (agents, skills), models and training, and evaluation. Pick a speaker to see their pipeline; click any box for details. Stage placements were assigned by a model from each item's description and uses.
 - **[resources.md](resources.md)**: the same list as Markdown, grouped by type.
 - **[data/](data/)**: the data as JSON (with every mention by session and speaker) and as CSV.
 - The list includes **skills, prompts and agent instructions** that participants published: Claude Code skills, AGENTS.md/CLAUDE.md files, workshop prompt sets and instruction files shown in workshop slides.
@@ -35,6 +36,6 @@ They looked up official links by web search. The results were merged, and duplic
 
 ## Rebuilding
 
-Edit `data/conference-resources-2026.json` or `template.html`, then run `python3 build.py`.
+Edit `data/conference-resources-2026.json`, `data/map-insights.json`, `template.html` or `template-map.html`, then run `python3 build.py`.
 
 Compiled by Dominik Lukeš with AI assistance (Claude).

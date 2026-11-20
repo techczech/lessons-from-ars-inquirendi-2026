@@ -1,0 +1,8 @@
+[
+ ["Reading is crowded, and mostly open", "19 items turn pages and recordings into text, and 16 of them are open: Kraken, eScriptorium, Qwen3-VL, dots.ocr, AnandaSky, Polyscriptor, Whisper. A scholar can run this stage without a commercial model."],
+ ["Normalisation is the thinnest stage", "Only 4 items, from Meelen and from Li, Zhong & McManus. The step from a diplomatic transcription to searchable standard text has the fewest tools, and in Meelen's published results hand-written rules beat her neural systems."],
+ ["Analysis is the largest stage, and where commercial models sit", "29 items: LLMs coding variables, scoring books, generating data and minting conjectures (Celli, Pink, Turchin, Stefanski). Commercial models are used mostly here and for annotation, rarely for reading."],
+ ["Building is a layer of its own", "19 items: coding agents, Claude skills, AGENTS.md files and prompt sets (Dows-Miller, Kiessling, Grant, Rabus). How scholars build and steer their tools was a topic in its own right."],
+ ["Evaluation runs alongside every stage", "20 items, and half have no public link: many talks validate against hand-built gold standards or human coding that are not published."],
+ ["Only one project retrains a general LLM", "Nehrdich's MITRA continues pretraining Qwen3.5 on about 30 billion tokens of Buddhist texts. Others train smaller task models (AnandaSky, Meelen's handwriting models, Polyscriptor) or use frontier models as they are."]
+]

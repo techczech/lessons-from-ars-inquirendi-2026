@@ -21,7 +21,12 @@
      "use": "Grant builds a curated source system on this pattern and demonstrates it in the workshop."
     }
    ],
-   "id": 1
+   "id": 1,
+   "stage": "search",
+   "also": [
+    "build"
+   ],
+   "role": "LLM-maintained markdown knowledge base pattern"
   },
   {
    "name": "Codex (OpenAI)",
@@ -46,7 +51,10 @@
      "use": "Rabus cites it alongside Claude Code as a commercial coding agent."
     }
    ],
-   "id": 2
+   "id": 2,
+   "stage": "build",
+   "also": [],
+   "role": "coding agent harness over local files"
   },
   {
    "name": "Grant, Using LLMs in Scholarship (slides)",
@@ -65,7 +73,12 @@
      "use": "Course material for the workshop."
     }
    ],
-   "id": 3
+   "id": 3,
+   "stage": "build",
+   "also": [
+    "papers"
+   ],
+   "role": "workshop slides on prompts and harnesses"
   },
   {
    "name": "Whisper",
@@ -84,7 +97,12 @@
      "use": "Meelen fine-tuned it on performed Tibetan rituals; it took 14 days and she judged data and compute too thin to post-train it further."
     }
    ],
-   "id": 4
+   "id": 4,
+   "stage": "reading",
+   "also": [
+    "models"
+   ],
+   "role": "fine-tuned for Tibetan ritual speech"
   },
   {
    "name": "Wav2Vec2",
@@ -103,7 +121,10 @@
      "use": "Meelen uses it for ritual speech recognition, as a smaller model than Whisper."
     }
    ],
-   "id": 5
+   "id": 5,
+   "stage": "reading",
+   "also": [],
+   "role": "smaller ritual speech recognition model"
   },
   {
    "name": "MMS (Massively Multilingual Speech)",
@@ -122,7 +143,10 @@
      "use": "Meelen names it with Wav2Vec2 as a smaller option for ritual speech."
     }
    ],
-   "id": 6
+   "id": 6,
+   "stage": "reading",
+   "also": [],
+   "role": "smaller multilingual speech recognition option"
   },
   {
    "name": "KenLM",
@@ -141,7 +165,12 @@
      "use": "Meelen adds a small KenLM model to speech recognition and to Tibetan normalisation."
     }
    ],
-   "id": 7
+   "id": 7,
+   "stage": "normalisation",
+   "also": [
+    "reading"
+   ],
+   "role": "n-gram LM for ASR and normalisation"
   },
   {
    "name": "Transkribus (platform; PaganTibet Ume models trained in it)",
@@ -166,7 +195,10 @@
      "use": "Expected Rabus comparator; not named in the Sunday abstract."
     }
    ],
-   "id": 8
+   "id": 8,
+   "stage": "reading",
+   "also": [],
+   "role": "HTR platform reading Tibetan Ume"
   },
   {
    "name": "Meelen & Griffiths 2026, Revue d'Études Tibétaines 84 (PT-Ume7 and HTR benchmarking)",
@@ -185,7 +217,13 @@
      "use": "The checked figures behind the keynote's HTR claims."
     }
    ],
-   "id": 9
+   "id": 9,
+   "stage": "evaluation",
+   "also": [
+    "reading",
+    "papers"
+   ],
+   "role": "reports Ume HTR models, cross-project failures"
   },
   {
    "name": "Meelen & Griffiths 2025, HTR for Tibetan manuscripts (JOHD)",
@@ -204,7 +242,13 @@
      "use": "Describes the three-tier annotator checking and agreement figures cited in the keynote."
     }
    ],
-   "id": 10
+   "id": 10,
+   "stage": "evaluation",
+   "also": [
+    "reading",
+    "papers"
+   ],
+   "role": "HTR data paper with ground-truth checking"
   },
   {
    "name": "PaganTibet HTR Input & Correction Manual",
@@ -223,7 +267,10 @@
      "use": "Instructions for the monks and annotators in Meelen's project."
     }
    ],
-   "id": 11
+   "id": 11,
+   "stage": "reading",
+   "also": [],
+   "role": "transcription and correction manual for annotators"
   },
   {
    "name": "Tibetan normalisation pipeline (rules, seq2seq, KenLM) and gold test data",
@@ -242,7 +289,12 @@
      "use": "Step 6 of Meelen's pipeline; her published repo reports rules alone beating neural variants."
     }
    ],
-   "id": 12
+   "id": 12,
+   "stage": "normalisation",
+   "also": [
+    "models"
+   ],
+   "role": "normalises diplomatic Tibetan to standard"
   },
   {
    "name": "Tibetan-normalisation-testdata",
@@ -261,7 +313,12 @@
      "use": "Public test set for the normalisation work."
     }
    ],
-   "id": 13
+   "id": 13,
+   "stage": "evaluation",
+   "also": [
+    "normalisation"
+   ],
+   "role": "gold test set for normalisation"
   },
   {
    "name": "Huang et al. 2023, transformer standardiser for Scottish Gaelic",
@@ -280,7 +337,13 @@
      "use": "The inspiration Meelen cites for augmenting her Tibetan data."
     }
    ],
-   "id": 14
+   "id": 14,
+   "stage": "normalisation",
+   "also": [
+    "models",
+    "papers"
+   ],
+   "role": "transformer standardising Gaelic orthography"
   },
   {
    "name": "Griffiths & Meelen 2025, How 'Pagan' Is My Text?",
@@ -299,7 +362,12 @@
      "use": "Basis of the keynote's content-catalogue method (embeddings plus classifier)."
     }
    ],
-   "id": 15
+   "id": 15,
+   "stage": "analysis",
+   "also": [
+    "papers"
+   ],
+   "role": "embedding-based content classification of manuscripts"
   },
   {
    "name": "Meelen, Nehrdich & Keutzer 2024, Breakthroughs in Tibetan NLP and Digital Humanities",
@@ -318,7 +386,12 @@
      "use": "Field overview underpinning the keynote."
     }
    ],
-   "id": 16
+   "id": 16,
+   "stage": "annotation",
+   "also": [
+    "papers"
+   ],
+   "role": "survey of Tibetan NLP"
   },
   {
    "name": "ACTib 2.0",
@@ -337,7 +410,12 @@
      "use": "Suggested source of text to align with images; Meelen and Roux built it."
     }
    ],
-   "id": 17
+   "id": 17,
+   "stage": "sources",
+   "also": [
+    "annotation"
+   ],
+   "role": "tagged Classical Tibetan corpus"
   },
   {
    "name": "TibSchol Tibetan cursive ground truth and Transkribus models",
@@ -356,7 +434,12 @@
      "use": "Models from other projects that Meelen found failing on her manuscripts."
     }
    ],
-   "id": 18
+   "id": 18,
+   "stage": "evaluation",
+   "also": [
+    "reading"
+   ],
+   "role": "Tibetan cursive HTR ground truth and models"
   },
   {
    "name": "AnandaSky",
@@ -375,7 +458,10 @@
      "use": "Reads Dunhuang manuscripts to make the Paris and London collections searchable."
     }
    ],
-   "id": 19
+   "id": 19,
+   "stage": "reading",
+   "also": [],
+   "role": "reads Chinese Dunhuang manuscript lines"
   },
   {
    "name": "AnandaSky paper (LT4HALA 2026)",
@@ -394,7 +480,12 @@
      "use": "Documents the ten-million-line method in the abstract."
     }
    ],
-   "id": 20
+   "id": 20,
+   "stage": "reading",
+   "also": [
+    "papers"
+   ],
+   "role": "documents alignment-trained Chinese HTR"
   },
   {
    "name": "VICReg writer-retrieval model (Brisson fork)",
@@ -413,7 +504,12 @@
      "use": "Retrieves manuscripts with similar hands and maps scribal affinities."
     }
    ],
-   "id": 21
+   "id": 21,
+   "stage": "capture",
+   "also": [
+    "models"
+   ],
+   "role": "image representation of scribal hands"
   },
   {
    "name": "Kraken",
@@ -438,7 +534,10 @@
      "use": "Kiessling's own tool and expected context for his workshop; not named in the Sunday abstract. Rabus also integrates it in Polyscriptor."
     }
    ],
-   "id": 22
+   "id": 22,
+   "stage": "reading",
+   "also": [],
+   "role": "open OCR/HTR engine"
   },
   {
    "name": "CHAT models and Siku HTR models (Brisson)",
@@ -457,7 +556,10 @@
      "use": "Companion models to his Dunhuang work."
     }
    ],
-   "id": 23
+   "id": 23,
+   "stage": "reading",
+   "also": [],
+   "role": "Chinese handwriting recognition models"
   },
   {
    "name": "International Dunhuang Programme (IDP)",
@@ -476,7 +578,10 @@
      "use": "Where Brisson's transcriptions are to appear; also the hub for Li's fragments."
     }
    ],
-   "id": 24
+   "id": 24,
+   "stage": "sources",
+   "also": [],
+   "role": "online archive of Dunhuang manuscripts"
   },
   {
    "name": "BnF Pelliot chinois collection (Gallica)",
@@ -495,7 +600,10 @@
      "use": "Source collection for Brisson's HTR and scribe work."
     }
    ],
-   "id": 25
+   "id": 25,
+   "stage": "sources",
+   "also": [],
+   "role": "Pelliot Dunhuang manuscript collection"
   },
   {
    "name": "Saṃsādhanī",
@@ -514,7 +622,10 @@
      "use": "Kulkarni's example of rule-based tooling for the hybrid paradigm."
     }
    ],
-   "id": 26
+   "id": 26,
+   "stage": "annotation",
+   "also": [],
+   "role": "rule-based Sanskrit segmentation and parsing"
   },
   {
    "name": "Sanskrit Heritage Platform",
@@ -533,7 +644,10 @@
      "use": "Kulkarni cites it as a rule-based comparison."
     }
    ],
-   "id": 27
+   "id": 27,
+   "stage": "annotation",
+   "also": [],
+   "role": "Sanskrit segmenter and morphological analyser"
   },
   {
    "name": "Digital Corpus of Sanskrit",
@@ -552,7 +666,13 @@
      "use": "Named by Kulkarni as gold-standard data."
     }
    ],
-   "id": 28
+   "id": 28,
+   "stage": "sources",
+   "also": [
+    "annotation",
+    "evaluation"
+   ],
+   "role": "lemmatised Sanskrit corpus as gold data"
   },
   {
    "name": "Dharmamitra",
@@ -577,7 +697,13 @@
      "use": "Nehrdich presents its scope, models and data, and the move from commercial APIs to self-hosting."
     }
    ],
-   "id": 29
+   "id": 29,
+   "stage": "annotation",
+   "also": [
+    "models",
+    "search"
+   ],
+   "role": "learned Sanskrit and Buddhist language tools"
   },
   {
    "name": "Cyc",
@@ -596,7 +722,10 @@
      "use": "Cited by Kulkarni as a failed world-knowledge effort."
     }
    ],
-   "id": 30
+   "id": 30,
+   "stage": "analysis",
+   "also": [],
+   "role": "hand-built symbolic knowledge base, cautionary"
   },
   {
    "name": "Fragment edge-matching ('reunion helper') paper",
@@ -615,7 +744,12 @@
      "use": "Identifies sibling fragments in Li's perception layer."
     }
    ],
-   "id": 31
+   "id": 31,
+   "stage": "capture",
+   "also": [
+    "papers"
+   ],
+   "role": "edge-matching of fragments"
   },
   {
    "name": "Handwriting-style matching paper (DSE-Rejoin, 63,608 images)",
@@ -634,7 +768,12 @@
      "use": "Groups leaves by scribal hand."
     }
    ],
-   "id": 32
+   "id": 32,
+   "stage": "capture",
+   "also": [
+    "papers"
+   ],
+   "role": "handwriting-style matching of leaves"
   },
   {
    "name": "YOLO11 (Ultralytics)",
@@ -653,7 +792,10 @@
      "use": "Heard in the talk as a detection step."
     }
    ],
-   "id": 33
+   "id": 33,
+   "stage": "capture",
+   "also": [],
+   "role": "object detection step in image pipeline"
   },
   {
    "name": "SimCLR",
@@ -672,7 +814,12 @@
      "use": "Heard in the talk; the Khotanese dataset uses contrastive learning and clustering."
     }
    ],
-   "id": 34
+   "id": 34,
+   "stage": "capture",
+   "also": [
+    "models"
+   ],
+   "role": "contrastive image representation learning"
   },
   {
    "name": "U-Net",
@@ -691,7 +838,10 @@
      "use": "Heard in the talk in the image pipeline."
     }
    ],
-   "id": 35
+   "id": 35,
+   "stage": "capture",
+   "also": [],
+   "role": "image segmentation in pipeline"
   },
   {
    "name": "Fate Twin",
@@ -710,7 +860,12 @@
      "use": "Supplies simulated evidence for reassembly decisions."
     }
    ],
-   "id": 36
+   "id": 36,
+   "stage": "analysis",
+   "also": [
+    "capture"
+   ],
+   "role": "simulates degradation to support reassembly"
   },
   {
    "name": "SRP (global reassembly)",
@@ -729,7 +884,12 @@
      "use": "Core of the reassembly system; scholars make the final call."
     }
    ],
-   "id": 37
+   "id": 37,
+   "stage": "analysis",
+   "also": [
+    "capture"
+   ],
+   "role": "predicts fragment adjacency for reassembly"
   },
   {
    "name": "Khotanese character dataset (256 classes, 201,452 images)",
@@ -748,7 +908,12 @@
      "use": "Extends the method beyond Chinese manuscripts."
     }
    ],
-   "id": 38
+   "id": 38,
+   "stage": "capture",
+   "also": [
+    "models"
+   ],
+   "role": "Khotanese character image dataset"
   },
   {
    "name": "HathiTrust",
@@ -767,7 +932,10 @@
      "use": "Source repository for the China-West corpus."
     }
    ],
-   "id": 39
+   "id": 39,
+   "stage": "sources",
+   "also": [],
+   "role": "digitised book repository"
   },
   {
    "name": "Internet Archive",
@@ -786,7 +954,10 @@
      "use": "Source repository for the corpus."
     }
    ],
-   "id": 40
+   "id": 40,
+   "stage": "sources",
+   "also": [],
+   "role": "digitised book repository with OCR"
   },
   {
    "name": "Gallica (BnF)",
@@ -805,7 +976,10 @@
      "use": "Source of early French and Latin books."
     }
    ],
-   "id": 41
+   "id": 41,
+   "stage": "sources",
+   "also": [],
+   "role": "French and Latin digitised books"
   },
   {
    "name": "Early English Books Online (EEBO)",
@@ -824,7 +998,10 @@
      "use": "Source repository for the corpus."
     }
    ],
-   "id": 42
+   "id": 42,
+   "stage": "sources",
+   "also": [],
+   "role": "early English printed books"
   },
   {
    "name": "Eighteenth Century Collections Online (ECCO)",
@@ -843,7 +1020,10 @@
      "use": "Source repository for the corpus."
     }
    ],
-   "id": 43
+   "id": 43,
+   "stage": "sources",
+   "also": [],
+   "role": "eighteenth-century printed books"
   },
   {
    "name": "dots.ocr",
@@ -862,7 +1042,10 @@
      "use": "Best performer in the team's OCR comparison on early European print (identity from audio, check slide)."
     }
    ],
-   "id": 44
+   "id": 44,
+   "stage": "reading",
+   "also": [],
+   "role": "OCR of early European print"
   },
   {
    "name": "DeepSeek-OCR",
@@ -881,7 +1064,10 @@
      "use": "Second on accuracy and slowest in the OCR comparison (version not stated; check slide)."
     }
    ],
-   "id": 45
+   "id": 45,
+   "stage": "reading",
+   "also": [],
+   "role": "vision-language OCR of print"
   },
   {
    "name": "Qwen3-VL",
@@ -906,7 +1092,10 @@
      "use": "Polyscriptor engine offered as open-weight alternative to commercial LLMs."
     }
    ],
-   "id": 46
+   "id": 46,
+   "stage": "reading",
+   "also": [],
+   "role": "vision-language page transcription"
   },
   {
    "name": "LLM-assisted OCR correction (China-West corpus)",
@@ -925,7 +1114,10 @@
      "use": "Cleans text from old books while trying to preserve evidence about the page."
     }
    ],
-   "id": 47
+   "id": 47,
+   "stage": "normalisation",
+   "also": [],
+   "role": "rules and LLM OCR post-correction"
   },
   {
    "name": "Commercial frontier LLM for toponym extraction",
@@ -944,7 +1136,12 @@
      "use": "Extracts, normalises and verifies Slavic place-name attestations in Livonia before 1700."
     }
    ],
-   "id": 48
+   "id": 48,
+   "stage": "annotation",
+   "also": [
+    "models"
+   ],
+   "role": "extracts and normalises place-name attestations"
   },
   {
    "name": "OpenITI corpus",
@@ -963,7 +1160,12 @@
      "use": "Corpus in which Savant's pipeline detects and identifies cited works."
     }
    ],
-   "id": 49
+   "id": 49,
+   "stage": "sources",
+   "also": [
+    "search"
+   ],
+   "role": "Arabic and Islamicate text corpus"
   },
   {
    "name": "KITAB / OpenITI web application",
@@ -982,7 +1184,12 @@
      "use": "The work-reference lists are to be ingested here."
     }
    ],
-   "id": 50
+   "id": 50,
+   "stage": "search",
+   "also": [
+    "publication"
+   ],
+   "role": "text-reuse explorer for OpenITI"
   },
   {
    "name": "Claude (Anthropic)",
@@ -1007,7 +1214,13 @@
      "use": "Minted the first batch of conjectures for QUINCUNX and is credited as contributor."
     }
    ],
-   "id": 51
+   "id": 51,
+   "stage": "models",
+   "also": [
+    "build",
+    "analysis"
+   ],
+   "role": "general LLM for development and conjectures"
   },
   {
    "name": "Work-reference detection and identification pipeline",
@@ -1026,7 +1239,12 @@
      "use": "Builds citation lists for every OpenITI book."
     }
    ],
-   "id": 52
+   "id": 52,
+   "stage": "search",
+   "also": [
+    "models"
+   ],
+   "role": "detects and identifies cited works"
   },
   {
    "name": "Stewart microforms of Mauritanian manuscripts (UIUC)",
@@ -1045,7 +1263,12 @@
      "use": "Test bed for vision models triaging script types and scribal hands."
     }
    ],
-   "id": 53
+   "id": 53,
+   "stage": "sources",
+   "also": [
+    "capture"
+   ],
+   "role": "microfilmed Saharan manuscript collection"
   },
   {
    "name": "Vision-capable frontier models (unnamed)",
@@ -1064,7 +1287,12 @@
      "use": "Stress-tested for confabulation and for script and hand triage."
     }
    ],
-   "id": 54
+   "id": 54,
+   "stage": "capture",
+   "also": [
+    "evaluation"
+   ],
+   "role": "triages script and hand; confabulation tested"
   },
   {
    "name": "Medici-Gondi archive (Penn)",
@@ -1083,7 +1311,10 @@
      "use": "Morreale tests HTR on its fifteenth-century account books."
     }
    ],
-   "id": 55
+   "id": 55,
+   "stage": "sources",
+   "also": [],
+   "role": "Florentine financial records archive"
   },
   {
    "name": "HTR on Italian account books (tool not named in abstract)",
@@ -1102,7 +1333,10 @@
      "use": "Morreale describes her workflow and its roadblocks."
     }
    ],
-   "id": 56
+   "id": 56,
+   "stage": "reading",
+   "also": [],
+   "role": "HTR on account books"
   },
   {
    "name": "MIME: Medieval Islamic Maps Encyclopedia",
@@ -1121,7 +1355,10 @@
      "use": "Her earliest digital work on about 3,000 map images."
     }
    ],
-   "id": 57
+   "id": 57,
+   "stage": "publication",
+   "also": [],
+   "role": "interactive map encyclopedia"
   },
   {
    "name": "Pixeum",
@@ -1140,7 +1377,10 @@
      "use": "Her preferred display platform."
     }
    ],
-   "id": 58
+   "id": 58,
+   "stage": "publication",
+   "also": [],
+   "role": "hosts map presentations"
   },
   {
    "name": "Virtual Mappa",
@@ -1159,7 +1399,12 @@
      "use": "Hosts the decoded ninth-century Isidorean T-O map with Arabic notations."
     }
    ],
-   "id": 59
+   "id": 59,
+   "stage": "publication",
+   "also": [
+    "annotation"
+   ],
+   "role": "annotated mappaemundi platform"
   },
   {
    "name": "Adobe Lightroom and FileMaker catalogues",
@@ -1178,7 +1423,10 @@
      "use": "Pinto's catalogues for her map images before Pixeum."
     }
    ],
-   "id": 60
+   "id": 60,
+   "stage": "publication",
+   "also": [],
+   "role": "catalogues map images"
   },
   {
    "name": "Agentic coding tools for scholarly editions (not named in abstract)",
@@ -1197,7 +1445,12 @@
      "use": "Boyer shows what agentic coding makes possible for editions."
     }
    ],
-   "id": 61
+   "id": 61,
+   "stage": "build",
+   "also": [
+    "publication"
+   ],
+   "role": "coding agents building scholarly editions"
   },
   {
    "name": "Source-fidelity comparison of LLMs on Islamic texts",
@@ -1216,7 +1469,10 @@
      "use": "Tests whether answers are correct, correctly attributed, and quoted faithfully; models not named in the abstract."
     }
    ],
-   "id": 62
+   "id": 62,
+   "stage": "evaluation",
+   "also": [],
+   "role": "tests source fidelity of LLM answers"
   },
   {
    "name": "Hinschius's Decretales Pseudo-Isidorianae apparatus",
@@ -1235,7 +1491,12 @@
      "use": "Validation baseline for Witowski's LLM source inventory."
     }
    ],
-   "id": 63
+   "id": 63,
+   "stage": "evaluation",
+   "also": [
+    "sources"
+   ],
+   "role": "critical edition as validation baseline"
   },
   {
    "name": "Schon's Pseudoisidor transcriptions",
@@ -1254,7 +1515,10 @@
      "use": "Second validation baseline for precision and recall."
     }
    ],
-   "id": 64
+   "id": 64,
+   "stage": "evaluation",
+   "also": [],
+   "role": "transcriptions as validation baseline"
   },
   {
    "name": "MDZ (Münchener DigitalisierungsZentrum) scans",
@@ -1273,7 +1537,10 @@
      "use": "Used to verify the model's findings on manuscript scans."
     }
    ],
-   "id": 65
+   "id": 65,
+   "stage": "sources",
+   "also": [],
+   "role": "digitised manuscript collection for verification"
   },
   {
    "name": "Clavis Canonum",
@@ -1292,7 +1559,10 @@
      "use": "Part of the retrieval and verification ecosystem Witowski proposes for lone scholars."
     }
    ],
-   "id": 66
+   "id": 66,
+   "stage": "search",
+   "also": [],
+   "role": "canon-law source database for verification"
   },
   {
    "name": "LLM-assisted source inventory of quotations (Pseudo-Isidore pilot)",
@@ -1311,7 +1581,12 @@
      "use": "Measured for precision, recall and error types against the two baselines."
     }
    ],
-   "id": 67
+   "id": 67,
+   "stage": "search",
+   "also": [
+    "annotation"
+   ],
+   "role": "detects quotations and sources in texts"
   },
   {
    "name": "Vibe-Coding for Medievalists repository",
@@ -1330,7 +1605,12 @@
      "use": "Participants clone it and build a simple Python TEI-encoding web application with an LLM."
     }
    ],
-   "id": 68
+   "id": 68,
+   "stage": "build",
+   "also": [
+    "publication"
+   ],
+   "role": "workshop repo for TEI app building"
   },
   {
    "name": "Vibe-coding (LLM-directed code writing)",
@@ -1349,7 +1629,10 @@
      "use": "Taught as a research method, with trust judged by how easily outputs can be checked (e.g. valid TEI-XML from a manual transcription)."
     }
    ],
-   "id": 69
+   "id": 69,
+   "stage": "build",
+   "also": [],
+   "role": "LLM-directed coding as method"
   },
   {
    "name": "GitHub Copilot",
@@ -1368,7 +1651,10 @@
      "use": "The assistant participants use to vibe-code the TEI application (free tier or Copilot Pro via GitHub Education)."
     }
    ],
-   "id": 70
+   "id": 70,
+   "stage": "build",
+   "also": [],
+   "role": "coding assistant in VS Code"
   },
   {
    "name": "Visual Studio Code",
@@ -1387,7 +1673,10 @@
      "use": "The development environment for the workshop project."
     }
    ],
-   "id": 71
+   "id": 71,
+   "stage": "build",
+   "also": [],
+   "role": "development environment"
   },
   {
    "name": "GitHub Desktop",
@@ -1406,7 +1695,10 @@
      "use": "Used to clone the workshop repository and do safe version control."
     }
    ],
-   "id": 72
+   "id": 72,
+   "stage": "build",
+   "also": [],
+   "role": "Git version control client"
   },
   {
    "name": "Python 3.11+",
@@ -1425,7 +1717,10 @@
      "use": "Runtime for the Python TEI-encoder web app."
     }
    ],
-   "id": 73
+   "id": 73,
+   "stage": "build",
+   "also": [],
+   "role": "runtime for TEI app"
   },
   {
    "name": "TEI-XML (Text Encoding Initiative)",
@@ -1444,7 +1739,12 @@
      "use": "Target output the LLM-built app generates from manual transcriptions; chosen because validity is automatically checkable."
     }
    ],
-   "id": 74
+   "id": 74,
+   "stage": "publication",
+   "also": [
+    "build"
+   ],
+   "role": "encoding standard for editions"
   },
   {
    "name": "Seshat: Global History Databank",
@@ -1463,7 +1763,12 @@
      "use": "Turchin's project curates it; Celli uses it as the human-coded ground truth against which LLM-generated data is compared."
     }
    ],
-   "id": 75
+   "id": 75,
+   "stage": "evaluation",
+   "also": [
+    "analysis"
+   ],
+   "role": "human-coded ground truth variables"
   },
   {
    "name": "CrisisDB",
@@ -1482,7 +1787,10 @@
      "use": "Likely part of the Social Complexity and Collapse project's instability data, which the keynote says is being generated with AI plus human experts. The abstract does not name it, so this is inferred."
     }
    ],
-   "id": 76
+   "id": 76,
+   "stage": "analysis",
+   "also": [],
+   "role": "crisis cases and outcomes data"
   },
   {
    "name": "Cliodynamics / structural-demographic theory",
@@ -1501,7 +1809,10 @@
      "use": "The framework for the keynote's instability data; also the source of the SD phases Celli's LLMs classify."
     }
    ],
-   "id": 77
+   "id": 77,
+   "stage": "analysis",
+   "also": [],
+   "role": "structural-demographic modelling framework"
   },
   {
    "name": "End Times: Elites, Counter-Elites, and the Path of Political Disintegration (2023)",
@@ -1520,7 +1831,12 @@
      "use": "Named as background reading for the keynote."
     }
    ],
-   "id": 78
+   "id": 78,
+   "stage": "analysis",
+   "also": [
+    "papers"
+   ],
+   "role": "background book on elite overproduction"
   },
   {
    "name": "QUINCUNX",
@@ -1539,7 +1855,10 @@
      "use": "Applied to Roman inscriptions (EDH) to infer what the surviving record lacks; first EDH batch minted with a Claude model."
     }
    ],
-   "id": 79
+   "id": 79,
+   "stage": "analysis",
+   "also": [],
+   "role": "LLM conjecture engine over inscriptions"
   },
   {
    "name": "QUINCUNX paper (Zenodo, 12 Aug 2026)",
@@ -1558,7 +1877,12 @@
      "use": "The written account of the talk, with a separate audit record."
     }
    ],
-   "id": 80
+   "id": 80,
+   "stage": "analysis",
+   "also": [
+    "papers"
+   ],
+   "role": "describes conjecture engine and test"
   },
   {
    "name": "QUINCUNX data and audit record",
@@ -1577,7 +1901,12 @@
      "use": "Lets readers check how far the registered tests justify belief."
     }
    ],
-   "id": 81
+   "id": 81,
+   "stage": "evaluation",
+   "also": [
+    "analysis"
+   ],
+   "role": "audit record of registered tests"
   },
   {
    "name": "1001 Conjectures",
@@ -1596,7 +1925,12 @@
      "use": "Open route on the conference site for visitors to respond or add conjectures; from the earlier research note, not re-checked here."
     }
    ],
-   "id": 82
+   "id": 82,
+   "stage": "analysis",
+   "also": [
+    "publication"
+   ],
+   "role": "registry of falsifiable conjectures"
   },
   {
    "name": "Epigraphic Database Heidelberg (EDH)",
@@ -1615,7 +1949,10 @@
      "use": "Evidence base for QUINCUNX (66 provincial files split, half hidden for scoring)."
     }
    ],
-   "id": 83
+   "id": 83,
+   "stage": "sources",
+   "also": [],
+   "role": "Latin inscription corpus"
   },
   {
    "name": "EDH cleaned dataset (Zenodo)",
@@ -1634,7 +1971,10 @@
      "use": "Machine-readable version of the QUINCUNX evidence base; from the earlier research note, not re-opened."
     }
    ],
-   "id": 84
+   "id": 84,
+   "stage": "sources",
+   "also": [],
+   "role": "cleaned machine-readable inscriptions"
   },
   {
    "name": "Epigraphic Database Roma (EDR)",
@@ -1653,7 +1993,10 @@
      "use": "Named in the QUINCUNX article as a further epigraphic source."
     }
    ],
-   "id": 85
+   "id": 85,
+   "stage": "sources",
+   "also": [],
+   "role": "Roman and Italian inscription database"
   },
   {
    "name": "ChatGPT 5.6 Sol",
@@ -1672,7 +2015,12 @@
      "use": "Listed as a co-author or contributor to the QUINCUNX paper."
     }
    ],
-   "id": 86
+   "id": 86,
+   "stage": "models",
+   "also": [
+    "analysis"
+   ],
+   "role": "LLM contributor to conjectures"
   },
   {
    "name": "Grok 4.5",
@@ -1691,7 +2039,12 @@
      "use": "Listed as a co-author or contributor to the QUINCUNX paper."
     }
    ],
-   "id": 87
+   "id": 87,
+   "stage": "models",
+   "also": [
+    "analysis"
+   ],
+   "role": "LLM contributor to conjectures"
   },
   {
    "name": "Graffiti",
@@ -1710,7 +2063,10 @@
      "use": "Cited as a precedent for the generate-and-kill loop."
     }
    ],
-   "id": 88
+   "id": 88,
+   "stage": "analysis",
+   "also": [],
+   "role": "precedent conjecture generator"
   },
   {
    "name": "BACON",
@@ -1729,7 +2085,10 @@
      "use": "Cited as a precedent for machine hypothesis generation."
     }
    ],
-   "id": 89
+   "id": 89,
+   "stage": "analysis",
+   "also": [],
+   "role": "precedent machine hypothesis generator"
   },
   {
    "name": "Eureqa",
@@ -1748,7 +2107,10 @@
      "use": "Cited as a precedent for machine hypothesis generation."
     }
    ],
-   "id": 90
+   "id": 90,
+   "stage": "analysis",
+   "also": [],
+   "role": "precedent law discovery by regression"
   },
   {
    "name": "Robot Scientist",
@@ -1767,7 +2129,10 @@
      "use": "Cited as a precedent for machine hypothesis generation."
     }
    ],
-   "id": 91
+   "id": 91,
+   "stage": "analysis",
+   "also": [],
+   "role": "precedent automated hypothesis testing"
   },
   {
    "name": "FunSearch",
@@ -1786,7 +2151,12 @@
      "use": "Cited in the QUINCUNX article (not the abstract) as a related approach."
     }
    ],
-   "id": 92
+   "id": 92,
+   "stage": "analysis",
+   "also": [
+    "models"
+   ],
+   "role": "LLM with machine-checkable evaluator"
   },
   {
    "name": "SikuBERT",
@@ -1805,7 +2175,12 @@
      "use": "Supplies dense semantic representations of Yongzheng vermilion-rescript memorials, checked iteratively against human coding."
     }
    ],
-   "id": 93
+   "id": 93,
+   "stage": "search",
+   "also": [
+    "models"
+   ],
+   "role": "embeddings of classical Chinese memorials"
   },
   {
    "name": "SikuRoBERTa",
@@ -1824,7 +2199,12 @@
      "use": "Not named in the abstract, only SikuBERT is; listed as the sibling model."
     }
    ],
-   "id": 94
+   "id": 94,
+   "stage": "search",
+   "also": [
+    "models"
+   ],
+   "role": "sibling classical Chinese embedding model"
   },
   {
    "name": "Grounded-theory three-level coding (open, axial, selective)",
@@ -1843,7 +2223,12 @@
      "use": "Used iteratively with SikuBERT embeddings to code memorial genre, subject, tone and urgency of imperial feedback."
     }
    ],
-   "id": 95
+   "id": 95,
+   "stage": "annotation",
+   "also": [
+    "analysis"
+   ],
+   "role": "qualitative coding of memorial features"
   },
   {
    "name": "Yongzheng palace-memorial (zouzhe) corpus with vermilion rescripts",
@@ -1862,7 +2247,10 @@
      "use": "The corpus analysed computationally."
     }
    ],
-   "id": 96
+   "id": 96,
+   "stage": "sources",
+   "also": [],
+   "role": "imperial memorials corpus"
   },
   {
    "name": "Epistemic loss",
@@ -1881,7 +2269,10 @@
      "use": "Framework for making infrastructural losses transparent to researchers; no tool or dataset is named in the abstract."
     }
    ],
-   "id": 97
+   "id": 97,
+   "stage": "evaluation",
+   "also": [],
+   "role": "framework for infrastructural information loss"
   },
   {
    "name": "Seshat-perspective",
@@ -1900,7 +2291,12 @@
      "use": "Compares LLM worldviews against 640 human-coded polities, with the largest divergence on elite power type."
     }
    ],
-   "id": 98
+   "id": 98,
+   "stage": "analysis",
+   "also": [
+    "annotation"
+   ],
+   "role": "LLM-generated expanded polity variables"
   },
   {
    "name": "Seshat-perspective paper (CLiC-it 2026)",
@@ -1919,7 +2315,12 @@
      "use": "Source of the data-generation use case."
     }
    ],
-   "id": 99
+   "id": 99,
+   "stage": "analysis",
+   "also": [
+    "papers"
+   ],
+   "role": "documents perspectivist LLM data generation"
   },
   {
    "name": "Time Resolved Variable (TRV) prompting",
@@ -1938,7 +2339,12 @@
      "use": "Used to generate Seshat variables with each LLM."
     }
    ],
-   "id": 100
+   "id": 100,
+   "stage": "analysis",
+   "also": [
+    "annotation"
+   ],
+   "role": "prompting generating Seshat variables"
   },
   {
    "name": "Llama 3.1 (large)",
@@ -1957,7 +2363,12 @@
      "use": "The US model in the perspectivist Seshat expansion."
     }
    ],
-   "id": 101
+   "id": 101,
+   "stage": "analysis",
+   "also": [
+    "models"
+   ],
+   "role": "US LLM generating polity data"
   },
   {
    "name": "DeepSeek R1",
@@ -1976,7 +2387,12 @@
      "use": "The Chinese model in the Seshat expansion."
     }
    ],
-   "id": 102
+   "id": 102,
+   "stage": "analysis",
+   "also": [
+    "models"
+   ],
+   "role": "Chinese LLM generating polity data"
   },
   {
    "name": "Mistral 3 (medium)",
@@ -1995,7 +2411,12 @@
      "use": "The European model in the Seshat expansion."
     }
    ],
-   "id": 103
+   "id": 103,
+   "stage": "analysis",
+   "also": [
+    "models"
+   ],
+   "role": "European LLM generating polity data"
   },
   {
    "name": "Gemini 2.0 Flash",
@@ -2014,7 +2435,12 @@
      "use": "Used in the paper to propose new polities for a region cluster; named in the paper, not the abstract."
     }
    ],
-   "id": 104
+   "id": 104,
+   "stage": "analysis",
+   "also": [
+    "models"
+   ],
+   "role": "LLM proposing new polities"
   },
   {
    "name": "all-MiniLM-L6-v2",
@@ -2033,7 +2459,12 @@
      "use": "Cosine similarity between LLM-generated and human-coded Seshat descriptions."
     }
    ],
-   "id": 105
+   "id": 105,
+   "stage": "evaluation",
+   "also": [
+    "search"
+   ],
+   "role": "embedding similarity of LLM and human text"
   },
   {
    "name": "chronos-historical-sdt-benchmark",
@@ -2052,7 +2483,12 @@
      "use": "Compares humans and LLMs in classifying SD phases; inter-annotator agreement and perplexity are the metrics."
     }
    ],
-   "id": 106
+   "id": 106,
+   "stage": "evaluation",
+   "also": [
+    "analysis"
+   ],
+   "role": "benchmark of human and LLM phase labels"
   },
   {
    "name": "chronos-llm-agreement dataset",
@@ -2071,7 +2507,10 @@
      "use": "Supports the finding that humans disagree through personal bias and LLMs through causal slicing."
     }
    ],
-   "id": 107
+   "id": 107,
+   "stage": "evaluation",
+   "also": [],
+   "role": "agreement data for human and LLM labels"
   },
   {
    "name": "Celli publications repository",
@@ -2090,7 +2529,12 @@
      "use": "Repository the speaker links for these talks."
     }
    ],
-   "id": 108
+   "id": 108,
+   "stage": "analysis",
+   "also": [
+    "papers"
+   ],
+   "role": "papers and data repository"
   },
   {
    "name": "Claude Sonnet 4",
@@ -2109,7 +2553,13 @@
      "use": "Classified and extracted authority-contestation passages from 4,357 inquisition testimonies, validated at 85-99% agreement with human coding on 200-testimony samples per variable."
     }
    ],
-   "id": 109
+   "id": 109,
+   "stage": "annotation",
+   "also": [
+    "models",
+    "analysis"
+   ],
+   "role": "classifies and extracts testimony passages"
   },
   {
    "name": "LLM-assisted extraction with human validation",
@@ -2128,7 +2578,12 @@
      "use": "Turns dispersed passages across 20 registers into a dataset for statistical tests on culture, setting, period and gender."
     }
    ],
-   "id": 110
+   "id": 110,
+   "stage": "annotation",
+   "also": [
+    "evaluation"
+   ],
+   "role": "LLM extraction with human validation"
   },
   {
    "name": "Medieval inquisition registers (20 registers, 1243-1522)",
@@ -2147,7 +2602,10 @@
      "use": "Source corpus for the authority-contestation study; the specific editions are not named."
     }
    ],
-   "id": 111
+   "id": 111,
+   "stage": "sources",
+   "also": [],
+   "role": "inquisition register corpus"
   },
   {
    "name": "DISSINET (Dissident Networks Project)",
@@ -2166,7 +2624,12 @@
      "use": "Likely data and method background for the study; inferred, not stated."
     }
    ],
-   "id": 112
+   "id": 112,
+   "stage": "analysis",
+   "also": [
+    "annotation"
+   ],
+   "role": "structured data and network analysis"
   },
   {
    "name": "Automating the inquisition: AI data capture of dissident interactions described in heresy trial records (2025)",
@@ -2185,7 +2648,12 @@
      "use": "Found by search as related prior work; not confirmed as linked for this talk."
     }
    ],
-   "id": 113
+   "id": 113,
+   "stage": "annotation",
+   "also": [
+    "papers"
+   ],
+   "role": "AI data capture from registers"
   },
   {
    "name": "Converso kinship records (musters, inquisitorial proceedings, wills, genealogical inquiries)",
@@ -2204,7 +2672,12 @@
      "use": "LLM-assisted transcription, translation and comparison to propose connections, verified against manuscripts. No named model or tool in the abstract."
     }
    ],
-   "id": 114
+   "id": 114,
+   "stage": "sources",
+   "also": [
+    "annotation"
+   ],
+   "role": "dispersed kinship records for linking"
   },
   {
    "name": "Cultural Capital and the Productivity of Ideas: Evidence from Historical Texts",
@@ -2223,7 +2696,12 @@
      "use": "The talk's paper, with the replication package referred to in the text."
     }
    ],
-   "id": 115
+   "id": 115,
+   "stage": "analysis",
+   "also": [
+    "papers"
+   ],
+   "role": "paper on text-measured cultural capital"
   },
   {
    "name": "Gemini 2.5 Pro and Gemini 2.5 Flash",
@@ -2242,7 +2720,12 @@
      "use": "Production scorers of the books: Pro for the context pass, Flash for the scoring pass (paper text)."
     }
    ],
-   "id": 116
+   "id": 116,
+   "stage": "analysis",
+   "also": [
+    "models"
+   ],
+   "role": "LLM scoring of books"
   },
   {
    "name": "DeepSeek v4",
@@ -2261,7 +2744,12 @@
      "use": "Robustness rescoring of the books; book-level rank agreement with Gemini 0.63-0.79."
     }
    ],
-   "id": 117
+   "id": 117,
+   "stage": "evaluation",
+   "also": [
+    "analysis"
+   ],
+   "role": "robustness rescoring with second LLM"
   },
   {
    "name": "Project Gutenberg",
@@ -2280,7 +2768,10 @@
      "use": "Source of the Western canon books scored by LLMs."
     }
    ],
-   "id": 118
+   "id": 118,
+   "stage": "sources",
+   "also": [],
+   "role": "public-domain book corpus"
   },
   {
    "name": "EEBO-TCP, Evans, ECCO and Internet Archive collections",
@@ -2299,7 +2790,12 @@
      "use": "Independent archive that reproduces the decline in the Innovation Wedge."
     }
    ],
-   "id": 119
+   "id": 119,
+   "stage": "sources",
+   "also": [
+    "evaluation"
+   ],
+   "role": "independent archives replicating result"
   },
   {
    "name": "Hofstede cultural dimension scores and other modern value surveys",
@@ -2318,7 +2814,10 @@
      "use": "Compared against country stocks from the text measure; stated not to be used for calibration."
     }
    ],
-   "id": 120
+   "id": 120,
+   "stage": "evaluation",
+   "also": [],
+   "role": "external scores validating text measure"
   },
   {
    "name": "Culture Compass",
@@ -2337,7 +2836,12 @@
      "use": "Named on the programme for pre-session exploration; the URL is not on the text I was given and search found only unrelated products of the same name."
     }
    ],
-   "id": 121
+   "id": 121,
+   "stage": "publication",
+   "also": [
+    "analysis"
+   ],
+   "role": "interactive page of book scores"
   },
   {
    "name": "Innovation Wedge",
@@ -2356,7 +2860,10 @@
      "use": "Feeds a calibrated semi-endogenous growth model."
     }
    ],
-   "id": 122
+   "id": 122,
+   "stage": "analysis",
+   "also": [],
+   "role": "index of LLM book scores"
   },
   {
    "name": "The Yeoman's Portfolio: Measuring Historical Risk Preferences Using Crop Choice",
@@ -2375,7 +2882,12 @@
      "use": "Estimates county-level US and farmer-level Kansas risk preferences, 1889-1929. No LLM, dataset or model is named."
     }
    ],
-   "id": 123
+   "id": 123,
+   "stage": "analysis",
+   "also": [
+    "papers"
+   ],
+   "role": "estimates risk preferences from crop choice"
   },
   {
    "name": "Cyphersolver",
@@ -2394,7 +2906,12 @@
      "use": "Kiessling critically examines it as a test case for human intervention, generated code and uncertainty in an automatically built research database."
     }
    ],
-   "id": 124
+   "id": 124,
+   "stage": "build",
+   "also": [
+    "analysis"
+   ],
+   "role": "agent-built cipher decipherment project"
   },
   {
    "name": "Cyphersolver catalogue (catalogue.json, SOLVED_CATALOGUE.md)",
@@ -2413,7 +2930,12 @@
      "use": "Kiessling uses it as the object of critique (controls, decipherment vs key recovery)."
     }
    ],
-   "id": 125
+   "id": 125,
+   "stage": "analysis",
+   "also": [
+    "evaluation"
+   ],
+   "role": "auto-generated cipher catalogue critiqued"
   },
   {
    "name": "Tokenisation and text encoding for historical text",
@@ -2432,7 +2954,12 @@
      "use": "Kiessling shows how historical distinctions vanish before a model sees the text."
     }
    ],
-   "id": 126
+   "id": 126,
+   "stage": "models",
+   "also": [
+    "evaluation"
+   ],
+   "role": "tokenisation erases historic distinctions"
   },
   {
    "name": "System prompts and alignment (hidden instructions)",
@@ -2451,7 +2978,12 @@
      "use": "Kiessling shows how hidden instructions, sampling and deployment limit reproducibility."
     }
    ],
-   "id": 127
+   "id": 127,
+   "stage": "evaluation",
+   "also": [
+    "models"
+   ],
+   "role": "hidden prompts limit reproducibility"
   },
   {
    "name": "eScriptorium",
@@ -2470,7 +3002,12 @@
      "use": "Expected Kiessling context; not named in the Sunday abstract. Rabus's Polyscriptor is reported to be used by it."
     }
    ],
-   "id": 128
+   "id": 128,
+   "stage": "reading",
+   "also": [
+    "annotation"
+   ],
+   "role": "platform for transcribing and training HTR"
   },
   {
    "name": "Polyscriptor",
@@ -2489,7 +3026,10 @@
      "use": "Rabus presents its web version and shows when open-weight models can replace commercial agentic models for HTR."
     }
    ],
-   "id": 129
+   "id": 129,
+   "stage": "reading",
+   "also": [],
+   "role": "multi-engine HTR toolkit"
   },
   {
    "name": "Polyscriptor HTR demo (Hugging Face Space)",
@@ -2508,7 +3048,12 @@
      "use": "Public web version of the tool Rabus presents."
     }
    ],
-   "id": 130
+   "id": 130,
+   "stage": "reading",
+   "also": [
+    "publication"
+   ],
+   "role": "hosted HTR demo"
   },
   {
    "name": "Claude Code",
@@ -2527,7 +3072,10 @@
      "use": "Rabus cites it as an example of coding agents that widen humanists' options, and as commercial tooling to reduce dependence on."
     }
    ],
-   "id": 131
+   "id": 131,
+   "stage": "build",
+   "also": [],
+   "role": "commercial coding agent"
   },
   {
    "name": "Commercial multimodal LLMs for HTR (Gemini, Claude, GPT via API)",
@@ -2546,7 +3094,12 @@
      "use": "Rabus compares them with open-weight models for HTR; Polyscriptor can call them."
     }
    ],
-   "id": 132
+   "id": 132,
+   "stage": "reading",
+   "also": [
+    "models"
+   ],
+   "role": "commercial vision LLMs for HTR"
   },
   {
    "name": "Polyscriptor CRNN-CTC and TrOCR models (Church Slavonic, Ukrainian, Prosta Mova, Glagolitic, Russian)",
@@ -2565,7 +3118,10 @@
      "use": "Open, CPU-capable models for Rabus's sovereignty argument."
     }
    ],
-   "id": 133
+   "id": 133,
+   "stage": "reading",
+   "also": [],
+   "role": "open line-level HTR models"
   },
   {
    "name": "Postcards of Soviet Ukrainian forced labourers (Nazi Germany)",
@@ -2584,7 +3140,10 @@
      "use": "Rabus's test material for HTR."
     }
    ],
-   "id": 134
+   "id": 134,
+   "stage": "sources",
+   "also": [],
+   "role": "handwritten postcard test corpus"
   },
   {
    "name": "MITRA-Qwen3.5 (base, 9B)",
@@ -2603,7 +3162,10 @@
      "use": "Self-trained, self-hosted replacement for commercial APIs in Dharmamitra."
     }
    ],
-   "id": 135
+   "id": 135,
+   "stage": "models",
+   "also": [],
+   "role": "continued pretraining on Buddhist texts"
   },
   {
    "name": "MITRA-Qwen3.5 instruction model (mitra-qwen35-it)",
@@ -2622,7 +3184,12 @@
      "use": "Chat and translation model behind the platform."
     }
    ],
-   "id": 136
+   "id": 136,
+   "stage": "models",
+   "also": [
+    "annotation"
+   ],
+   "role": "instruction model for chat and translation"
   },
   {
    "name": "MITRA-Qwen3.5 embedder (9B and 2B)",
@@ -2641,7 +3208,12 @@
      "use": "Multilingual retrieval across classical languages."
     }
    ],
-   "id": 137
+   "id": 137,
+   "stage": "models",
+   "also": [
+    "search"
+   ],
+   "role": "multilingual retrieval embedders"
   },
   {
    "name": "Qwen3.5",
@@ -2660,7 +3232,10 @@
      "use": "Starting point for continued pretraining."
     }
    ],
-   "id": 138
+   "id": 138,
+   "stage": "models",
+   "also": [],
+   "role": "base model for MITRA"
   },
   {
    "name": "Parallel data mined between classical languages (MITRA-parallel)",
@@ -2679,7 +3254,12 @@
      "use": "Training data for MITRA translation and embedding models."
     }
    ],
-   "id": 139
+   "id": 139,
+   "stage": "models",
+   "also": [
+    "sources"
+   ],
+   "role": "mined parallel training data"
   },
   {
    "name": "MITRA: A Large-Scale Parallel Corpus and Multilingual Pretrained Language Model... (Nehrdich and Keutzer)",
@@ -2698,7 +3278,12 @@
      "use": "Foundation of the MITRA approach discussed in the talk."
     }
    ],
-   "id": 140
+   "id": 140,
+   "stage": "models",
+   "also": [
+    "papers"
+   ],
+   "role": "parallel corpus and translation models paper"
   },
   {
    "name": "MITRA-lexicon / lexica and taggers (Nehrdich, Harimoto, Sellmer, Hellwig)",
@@ -2717,7 +3302,12 @@
      "use": "The talk says the same model yields lexica and taggers."
     }
    ],
-   "id": 141
+   "id": 141,
+   "stage": "annotation",
+   "also": [
+    "papers"
+   ],
+   "role": "lexica and taggers from MITRA"
   },
   {
    "name": "Dharmamitra Hugging Face organisation (buddhist-nlp)",
@@ -2736,7 +3326,10 @@
      "use": "Open release channel for Dharmamitra models and benchmarks."
     }
    ],
-   "id": 142
+   "id": 142,
+   "stage": "models",
+   "also": [],
+   "role": "hub of Buddhist language models and data"
   },
   {
    "name": "MITRA-zh-eval and Sanskrit benchmarks",
@@ -2755,7 +3348,10 @@
      "use": "Benchmarks yielded by the same model and data."
     }
    ],
-   "id": 143
+   "id": 143,
+   "stage": "evaluation",
+   "also": [],
+   "role": "Buddhist Chinese and Sanskrit benchmarks"
   },
   {
    "name": "ByT5-Sanskrit",
@@ -2774,7 +3370,12 @@
      "use": "Nehrdich's earlier Sanskrit model; not named in the Sunday abstract."
     }
    ],
-   "id": 144
+   "id": 144,
+   "stage": "annotation",
+   "also": [
+    "normalisation"
+   ],
+   "role": "Sanskrit segmentation and lemmatisation"
   },
   {
    "name": "ByT5-Sanskrit paper (EMNLP Findings 2024)",
@@ -2793,7 +3394,12 @@
      "use": "Reference paper for ByT5-Sanskrit."
     }
    ],
-   "id": 145
+   "id": 145,
+   "stage": "annotation",
+   "also": [
+    "papers"
+   ],
+   "role": "describes unified Sanskrit model"
   },
   {
    "name": "Aristotelian Search Engine",
@@ -2812,7 +3418,10 @@
      "use": "Shows the approach carrying over to other traditions with no model training, only an open embedding model and a small gold benchmark."
     }
    ],
-   "id": 146
+   "id": 146,
+   "stage": "search",
+   "also": [],
+   "role": "semantic search over Greek texts"
   },
   {
    "name": "Open embedding model + small gold benchmark (for Greek, Arabic, Hebrew, Latin)",
@@ -2831,7 +3440,12 @@
      "use": "Underpins the Aristotelian Search Engine; the specific embedder is not named in the abstract."
     }
    ],
-   "id": 147
+   "id": 147,
+   "stage": "search",
+   "also": [
+    "evaluation"
+   ],
+   "role": "open embedder tested on gold benchmark"
   },
   {
    "name": "Chinese Text Project (ctext.org)",
@@ -2850,7 +3464,10 @@
      "use": "The library Sturgeon is augmenting with AI."
     }
    ],
-   "id": 148
+   "id": 148,
+   "stage": "sources",
+   "also": [],
+   "role": "digital library of Chinese texts"
   },
   {
    "name": "Embedding retrieval and RAG over ctext",
@@ -2869,7 +3486,10 @@
      "use": "First of three applications Sturgeon describes."
     }
    ],
-   "id": 149
+   "id": 149,
+   "stage": "search",
+   "also": [],
+   "role": "embedding retrieval over ctext"
   },
   {
    "name": "Agentic enrichment of text and metadata",
@@ -2888,7 +3508,12 @@
      "use": "Third application Sturgeon describes, with a mix of closed- and open-weight models."
     }
    ],
-   "id": 150
+   "id": 150,
+   "stage": "annotation",
+   "also": [
+    "build"
+   ],
+   "role": "agents add structure and metadata"
   },
   {
    "name": "Generative translation and summarisation of pre-modern Chinese",
@@ -2907,7 +3532,10 @@
      "use": "Second application Sturgeon describes; specific models unnamed."
     }
    ],
-   "id": 151
+   "id": 151,
+   "stage": "annotation",
+   "also": [],
+   "role": "translation and summarisation of texts"
   },
   {
    "name": "Frontier LLMs (unnamed) in a three-condition test",
@@ -2926,7 +3554,12 @@
      "use": "Zhilina measures fabrication and anachronism, classifying errors (upgrade, anachronism, fabricated components, fabricated Greek glosses, invented continuity); model names are not in the abstract."
     }
    ],
-   "id": 152
+   "id": 152,
+   "stage": "evaluation",
+   "also": [
+    "analysis"
+   ],
+   "role": "measures fabrication in LLM definitions"
   },
   {
    "name": "Gold-standard componential and Greek-Slavonic analysis of красота",
@@ -2945,7 +3578,10 @@
      "use": "Zhilina's benchmark for LLM output."
     }
    ],
-   "id": 153
+   "id": 153,
+   "stage": "evaluation",
+   "also": [],
+   "role": "gold-standard analysis of one word"
   },
   {
    "name": "Anti-fabrication protocol for LLM-assisted lexicography",
@@ -2964,7 +3600,10 @@
      "use": "Zhilina's paper contribution."
     }
    ],
-   "id": 154
+   "id": 154,
+   "stage": "evaluation",
+   "also": [],
+   "role": "guards against fabricated semantic continuity"
   },
   {
    "name": "Regional Great Russian Dictionary (1852) and eleven Church Slavonic/historical Russian dictionaries",
@@ -2983,7 +3622,10 @@
      "use": "Source entries tested with LLMs."
     }
    ],
-   "id": 155
+   "id": 155,
+   "stage": "sources",
+   "also": [],
+   "role": "lexicographic source entries"
   },
   {
    "name": "PARSEME 2.0 annotation guidelines",
@@ -3002,7 +3644,10 @@
      "use": "Fendel's team adapts them to Ancient Greek and Latin."
     }
    ],
-   "id": 156
+   "id": 156,
+   "stage": "annotation",
+   "also": [],
+   "role": "multi-word expression annotation guidelines"
   },
   {
    "name": "PARSEME 2.0 Multilingual Corpus of Multiword Expressions",
@@ -3021,7 +3666,12 @@
      "use": "Fendel draws on the GRC portion (Attic courtroom oratory)."
     }
    ],
-   "id": 157
+   "id": 157,
+   "stage": "annotation",
+   "also": [
+    "sources"
+   ],
+   "role": "MWE corpus including Greek portion"
   },
   {
    "name": "UniDive WG1 Sub-task 1.6 Latin data",
@@ -3040,7 +3690,12 @@
      "use": "Second illustrative dataset in Fendel's talk."
     }
    ],
-   "id": 158
+   "id": 158,
+   "stage": "annotation",
+   "also": [
+    "sources"
+   ],
+   "role": "Latin MWE annotated sample"
   },
   {
    "name": "Universal Dependencies treebank (Ancient Greek)",
@@ -3059,7 +3714,12 @@
      "use": "Base layer for the Greek MWE annotation."
     }
    ],
-   "id": 159
+   "id": 159,
+   "stage": "annotation",
+   "also": [
+    "sources"
+   ],
+   "role": "treebank base for MWE annotation"
   },
   {
    "name": "Aevron",
@@ -3078,7 +3738,12 @@
      "use": "Parthasarathy presents it in the agents roundtable."
     }
    ],
-   "id": 160
+   "id": 160,
+   "stage": "build",
+   "also": [
+    "search"
+   ],
+   "role": "private research engine with notes and sources"
   },
   {
    "name": "Cyphersolver /writeup skill (with claims-review second reader)",
@@ -3097,7 +3762,10 @@
      "use": "Kiessling examines Cyphersolver as a case of an automatically built research database: what human control, generated code and uncertainty look like."
     }
    ],
-   "id": 161
+   "id": 161,
+   "stage": "build",
+   "also": [],
+   "role": "skill writing up cipher targets"
   },
   {
    "name": "Cyphersolver /profile skill",
@@ -3116,7 +3784,12 @@
      "use": "Same case study: the skill turns each agent run into checkable evaluation data."
     }
    ],
-   "id": 162
+   "id": 162,
+   "stage": "build",
+   "also": [
+    "evaluation"
+   ],
+   "role": "skill producing checkable profile data"
   },
   {
    "name": "Cyphersolver CLAUDE.md (repository instructions)",
@@ -3135,7 +3808,10 @@
      "use": "Part of the Cyphersolver case Kiessling critiques."
     }
    ],
-   "id": 163
+   "id": 163,
+   "stage": "build",
+   "also": [],
+   "role": "standing instructions for coding agent"
   },
   {
    "name": "Grant's Markdown instruction files (AGENTS.md, style, project, prose charter, ingestion guide, reviewer instructions)",
@@ -3154,7 +3830,10 @@
      "use": "Grant shows how saved instructions enter the model's context only when the harness loads them, using his international-law projects run in Codex."
     }
    ],
-   "id": 164
+   "id": 164,
+   "stage": "build",
+   "also": [],
+   "role": "saved instruction files for agents"
   },
   {
    "name": "Grant's scholarly legal prose charter",
@@ -3173,7 +3852,10 @@
      "use": "Shown in the slides as an example of a saved instruction that shapes drafting and review; the slides say the complete file accompanies them."
     }
    ],
-   "id": 165
+   "id": 165,
+   "stage": "build",
+   "also": [],
+   "role": "standing instruction for scholarly prose"
   },
   {
    "name": "Vibe-coding workshop prompts (travel prompts, pre-plan, build plan)",
@@ -3192,7 +3874,12 @@
      "use": "Participants use them to plan and build a TEI page editor with Copilot, starting from a written brief rather than an open request."
     }
    ],
-   "id": 166
+   "id": 166,
+   "stage": "build",
+   "also": [
+    "publication"
+   ],
+   "role": "prompts for building TEI editor"
   },
   {
    "name": "Kraken AGENTS.md (AI contribution policy)",
@@ -3211,7 +3898,10 @@
      "use": "Kraken is Kiessling's OCR/HTR engine; the file sets the project's rules for AI-assisted contributions."
     }
    ],
-   "id": 167
+   "id": 167,
+   "stage": "build",
+   "also": [],
+   "role": "AI contribution rules for engine"
   },
   {
    "name": "Polyscriptor Qwen3-VL prompts (qwen3_prompts.py)",
@@ -3230,7 +3920,13 @@
      "use": "Rabus's open-weight alternative to commercial models for HTR; the prompts are part of the toolkit."
     }
    ],
-   "id": 168
+   "id": 168,
+   "stage": "reading",
+   "also": [
+    "build"
+   ],
+   "role": "prompts for Qwen3-VL transcription"
   }
- ]
+ ],
+ "stages_note": "stage/also/role: where each item sits in a pipeline from sources to publication (sources, capture, reading, normalisation, annotation, search, analysis, publication) or a cross-cutting layer (build, models, evaluation); assigned by a Sonnet agent from each item's description and uses, 20 Nov 2026."
 }
